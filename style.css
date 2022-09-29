@@ -30,6 +30,20 @@ body {
   font-weight: bold;
 }
 
+.big {
+  color: #61afef;
+}
+
+.ghs {
+  color: #828282;
+}
+
+.project {
+    border: #9A9483 solid 1px;
+    background-color: #d3ccb6;
+    padding: 30px;
+}
+
 .container {
   display: flex;
   align-items: center;
