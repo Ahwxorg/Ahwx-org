@@ -1,0 +1,148 @@
+:root {
+/*  background: #A46CA2;*/
+  bg: #A682B0;
+  color: #EBC7E8;
+  gray: #D3C9D6;
+  gray-hover: #B5E8E0;
+  bg-light: #000;
+}
+
+body {
+//  overflow: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: (var--bg-light);
+		color: #222;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--bg-dark);
+		color: #fff;
+	}
+}
+
+.color {
+  color: var(--color);
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height:90vh;
+  display:flex;
+  flex-direction:column; 
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-in{
+  -webkit-animation: fade-in 2s ease;
+  -moz-animation: fade-in ease-in-out 2s both;
+  -ms-animation: fade-in ease-in-out 2s both;
+  -o-animation: fade-in ease-in-out 2s both;
+  animation: fade-in 2s ease;
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes fade-in{0%{opacity:0;} 100%{opacity:1;}}
+@-moz-keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
+@-o-keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
+@keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--gray);
+}
+
+a:link, a:visited {
+  color: var(--gray);
+}
+
+a:hover {
+  color: var(--gray-hover);
+  border-bottom: 1px solid var(--gray-hover);
+}
+
+.nav {
+  margin: 15px;
+}
+
+nav a {
+  float: left;
+  text-align: center;
+  padding: 0.2rem 0.7rem;
+  border-bottom: none;
+}
+
+nav a:hover {
+  border-bottom: none;
+  background-color: var(--bg);
+  opacity: 100%;
+}
+
+nav a.active {
+  background-color: var(--bg);
+  color: var(--gray);
+  border-radius: 0.2rem;
+}
+
+.projects {
+  border-radius: 2rem;
+  background-color: black;
+}
+
+.project {
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 12px;
+  margin: 0.6em 0;
+  -webkit-box-shadow: 0px 1px 12px -6px #000000;
+  box-shadow: 0px 1px 12px -6px #000000;
+}
+
+.project h4 {
+  margin: 0em;
+}
+
+.containment {
+/*  background-color: var(--gray);*/
+  border-radius: 10px;
+  
+}
+
+#avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  border-style: 1px solid white;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  align-items: center;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.width {
+  align-items: center;
+  text-align: center;
+}
