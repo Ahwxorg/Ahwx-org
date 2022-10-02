@@ -156,7 +156,32 @@ img {
   width: 50%;
 }
 
+.visitors-img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
 .width {
   align-items: center;
   text-align: center;
+}
+
+.updates {
+  border: none;
+  height: 100px;
+  width: 500px;
+}
+
+.website-counter {
+  height: 50px;
+  width: 80px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

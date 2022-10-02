@@ -13,7 +13,7 @@ const projects = document.getElementById("projects");
                                         <div class="project">
                                             <div class="big">` + arr[i].name + `</div>`;
                                     if (arr[i].description != null) {
-                                        out += `<p>` + arr[i].description + `</p>`;
+                                        out += `<p class="ghs">` + arr[i].description + `</p>`;
                                     }
                                     if (arr[i].language != null) {
                                         out += `<div class="ghs">

@@ -15,6 +15,20 @@ body {
   font-weight: bold;
 }
 
+@media (prefers-color-scheme: light) {
+	body, .projects, .ghs, .project, .big, p {
+		background-color: white;
+		color: black;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body, .projects, .ghs, .project, .big, p {
+		background-color: black;
+		color: white;
+	}
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -94,10 +108,24 @@ nav a.active {
   margin: 0.6em 0;
   -webkit-box-shadow: 0px 1px 12px -6px #000000;
   box-shadow: 0px 1px 12px -6px #000000;
+  color: white;
 }
 
 .project h4 {
   margin: 0em;
 }
 
+.big {
+  color: white;
+}
+
+.ghs {
+  background-color: black;
+  color: white;
+}
+
+p {
+  background-color: black;
+  color: white;
+}
 
