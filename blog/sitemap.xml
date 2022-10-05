@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://ahwx.org/blog/index.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+<url><loc>http://ahwx.org/blog/general/thereisnocloud.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+<url><loc>http://ahwx.org/blog/tutorials/battery.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+<url><loc>http://ahwx.org/blog/tutorials/become-master.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+<url><loc>http://ahwx.org/blog/tutorials/ilo4mod.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+<url><loc>http://ahwx.org/blog/tutorials/minecraft-systemd.html</loc><lastmod>2022-10-06</lastmod><priority>1.0</priority></url>
+</urlset>

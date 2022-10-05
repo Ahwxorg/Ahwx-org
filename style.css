@@ -38,6 +38,10 @@ body {
   color: #828282;
 }
 
+small, small a, small a:visited {
+  color: #888;
+}
+
 .project {
     border: #9A9483 solid 1px;
     background-color: #d3ccb6;
@@ -80,6 +84,7 @@ footer {
 a {
   text-decoration: none;
   border-bottom: 1px solid var(--gray);
+  color: #969ffe;
 }
 
 a:link, a:visited {
@@ -100,18 +105,18 @@ nav a {
   text-align: center;
   padding: 0.2rem 0.7rem;
   border-bottom: none;
+  color: #969ffe;
 }
 
 nav a:hover {
   border-bottom: none;
-  background-color: var(--bg);
   opacity: 100%;
+  color: #969ffe;
 }
 
 nav a.active {
-  background-color: var(--bg);
-  color: var(--gray);
   border-radius: 0.2rem;
+  color: #969ffe;
 }
 
 .projects {
@@ -185,3 +190,4 @@ img {
   align-items: center;
   flex-direction: column;
 }
+

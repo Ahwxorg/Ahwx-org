@@ -1,0 +1,168 @@
+/*
+
+body {
+  max-width: 70vw;
+  max-height: 90vh;
+  color: white;
+  background-color: black;
+  margin: auto;
+}
+
+ */
+
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 1rem auto;
+  max-width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+footer,
+header {
+  margin: 1rem 0;
+}
+
+hr {
+  border: 0;
+}
+
+h1, h2, hr {
+  margin-top: 3rem;
+}
+
+html, ul {
+  padding: 0 1rem;
+}
+
+li {
+  padding: 0.125rem 0;
+}
+
+p img, table {
+  width: 100%;
+}
+
+footer, header, small {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+small, small a, small a:visited {
+  color: #888;
+}
+
+blockquote {
+  border-left: 0.05rem solid #ccc;
+  margin: 0;
+  padding-left: 0.8rem;
+}
+
+code, pre, kbd {
+  font-family: menlo, monospace;
+}
+
+pre, table {
+  font-size: 1rem;
+}
+
+pre {
+  line-height: 1.6rem;
+  overflow-x: auto;
+}
+
+q::before {
+  content: "> ";
+  color: #aaa;
+}
+
+kbd {
+  color: #000;
+  font-weight: 700;
+}
+
+samp {
+  background-color: #00c;
+  color: #fff;
+}
+
+var {
+  background-color: #fda;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+td, th {
+  vertical-align: top;
+  padding: 0.5rem 1rem 0.5rem 0;
+  border-bottom: 0.05rem solid #ccc;
+}
+
+td:first-child {
+  white-space: nowrap;
+}
+
+td:last-child, th:last-child {
+  padding-right: 0;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #000;
+    color: #ccc;
+  }
+
+  a {
+    color: #fff;
+  }
+  
+  a:active, a:hover, a:visited:hover, kbd, samp {
+    color: #fff;
+  }
+
+  a:visited {
+    color: #888;
+  }
+  
+  small, small a, small a:visited {
+    color: #888;
+  }
+  
+  q::before {
+    color: #555;
+  }
+
+  var {
+    color: #000;
+  }
+  
+  samp {
+    background-color: #00c;
+  }
+  
+  blockquote {
+    border-left-color: #444;
+  }
+  
+  td, th {
+    border-bottom-color: #444;
+  }
+}
+
+iframe {
+  border: none;
+  height: 100px;
+  width: 500px;
+}
+
