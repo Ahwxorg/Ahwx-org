@@ -1,0 +1,127 @@
+<html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://ahwx.org/style.css" rel="stylesheet">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Home » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Home » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="/assets/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+  <div class="container"r>
+  <nav class="nav">
+        <a id="nav-butt" href="/"> [~/] </a>
+	      <a id="nav-butt" href="https://ahwx.org/blog"> [~/blog] </a>
+        <a id="nav-butt" href="/projects"> [~/projects/] </a>
+        <a id="nav-butt" href="/instances"> [~/instances/ </a>
+        <a id="nav-butt" href="https://git.ahwx.org/Ahwx"> [/mnt/git/] </a>
+        <a id="nav-butt" href="/gallery"> [~/gallery/] </a>
+        <a id="nav-butt" href="/about"> [~/about/] </a>
+        <a id="nav-butt" href="/donate"> [~/donate/] </a>
+	      <a id="nav-butt" href="/setup"> [~/setup/] </a>
+  </nav>
+     <br>
+     <br>
+<h1 id="ssh-setup">SSH Setup</h1>
+
+<p>SSH is a tool we all (might not) know and love, but configuring can be a bit tedious. That&#8217;s where I try to help you with my guide.</p>
+
+<h3 id="server-side">Server-side</h3>
+
+<p>All the stuff we will do on the server.</p>
+
+<h4 id="ssh-keys">SSH Keys</h4>
+
+<p>Let&#8217;s make some keys:</p>
+
+<p>Run the following code on the computer you will use to connect to your server:</p>
+
+<p><code>ssh-keygen</code></p>
+
+<p>After this, please make a backup to a USB drive or something. Store this securely, since this will be the access key to your server.</p>
+
+<p>Now, let&#8217;s copy the key to your server:</p>
+
+<p><code>ssh-copy-id root@yourdomain.tld</code></p>
+
+<p>Now, your <em>should</em> be able to log in to your server without a password, try logging in:</p>
+
+<p><code>ssh root@yourdomain.tld</code></p>
+
+<p>If that works, you&#8217;re good!</p>
+
+<p>Otherwise, try this:</p>
+
+<p><code>chmod 700 ~&#47;.ssh&#47;</code></p>
+
+<p><code>chmod 644 ~&#47;.ssh&#47;id_rsa.pub</code></p>
+
+<p><code>chmod 600 ~&#47;.ssh&#47;id_rsa</code></p>
+
+<p><code>chmod 644 ~&#47;.ssh&#47;authorized_keys</code></p>
+
+<h4 id="configuration-file">Configuration file</h4>
+
+<p>Now let&#8217;s log into the server and edit the configuration file (&#47;etc&#47;ssh&#47;sshd_config)</p>
+
+<p><code>sudo nvim &#47;etc&#47;ssh&#47;sshd_config</code></p>
+
+<p>Find the following lines, and make sure they&#8217;re are at these values.</p>
+
+<p><code>UsePAM no</code></p>
+
+<p><code>ChallengeResponseAuthentication no</code></p>
+
+<p><code>PasswordAuthentication no</code></p>
+
+<p><code>Port 10018</code></p>
+
+<p>Let&#8217;s reload the SSH configuration on the server to see if everything is working as expected, type:</p>
+
+<p><code>systemctl reload sshd</code></p>
+
+<p>You should validate that everything is working by opening a new terminal window, and checking if you can SSH into your server without issues. If that works, you&#8217;re golden. Otherwise, don&#8217;t log out and check your failure. searching online helps too :)! You should use the &#8220;-p 10018&#8221; flag to indicate that we want to use port 10018.</p>
+
+<h3 id="client-side">Client side</h3>
+
+<p>The things you do on your local machine.</p>
+
+<h4 id="ssh-configuration-file">SSH Configuration file</h4>
+
+<p>Make a file called &#8220;config&#8221; in the &#8220;~&#47;.ssh&#8221; directory.</p>
+
+<p>You are now able to enter the following content (with your server details of course)</p>
+
+<p><code>Host server</code></p>
+
+<p><code>HostName yourdomain.tld</code></p>
+
+<p><code>User root</code>`</p>
+
+<p><code>IdentityFile ~&#47;.ssh&#47;id_rsa</code></p>
+
+<p><code>Port 10018</code></p>
+
+<p>If you&#8217;ve done this correctly, (and I didn&#8217;t make fail whilst making this blog) you can now log into your server using <code>ssh server</code>.</p>
+</div>   
+<footer>
+     <div>
+       <center><p>Thanks for checking my blog out! This site is made with love using Neovim and a modified version of <a href="https://rgz.ee/ssg.html">ssg</a> on Void & Arch GNU/Linux.<br><a href="https://ahwx.org/privacy-policy"><strong>Privacy polity</strong></a></p></center>
+     </div>
+   </footer>

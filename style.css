@@ -60,6 +60,16 @@ small, small a, small a:visited {
   margin-right: 20vw;
 }
 
+.container-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-direction:column; 
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
 footer {
   display: flex;
   align-items: center;
