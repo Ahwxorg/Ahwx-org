@@ -1,13 +1,5 @@
-var counter = document.querySelector(".counter");
-var visits = localStorage.getItem("page_view");
+// const node = document.getElementByClassName('nav');
+// node.innerHTML(`<a id="nav-butt" href="/"> [~/] </a> <a id="nav-butt" href="https://ahwx.org/blog"> [~/blog] </a> <a id="nav-butt" href="/projects"> [~/projects/] </a> <a id="nav-butt" href="/instances"> [~/instances/ </a> <a id="nav-butt" href="https://git.ahwx.org/Ahwx"> [/mnt/git/] </a> <a id="nav-butt" href="/gallery"> [~/gallery/] </a> <a id="nav-butt" href="/about"> [~/about/] </a> <a id="nav-butt" href="/donate"> [~/donate/] </a><a id="nav-butt" href="/setup"> [~/setup/] </a>`);
+//
 
-// Check if page_view entry is present
-if (visits) {
-  visits = Number(visits) + 1;
-  localStorage.setItem("page_view", visits);
-} else {
-  visits = 1;
-  localStorage.setItem("page_view", 1);
-}
-
-counter.innerHTML = "You are visitor " + visits;
+document.write(`<nav class="nav"> <a id="nav-butt" href="/"> [~/] </a> <a id="nav-butt" href="https://ahwx.org/blog"> [~/blog] </a> <a id="nav-butt" href="/projects"> [~/projects/] </a> <a id="nav-butt" href="/instances"> [~/instances/ </a> <a id="nav-butt" href="https://git.ahwx.org/Ahwx"> [/mnt/git/] </a> <a id="nav-butt" href="/gallery"> [~/gallery/] </a> <a id="nav-butt" href="/about"> [~/about/] </a> <a id="nav-butt" href="/donate"> [~/donate/] </a><a id="nav-butt" href="/setup"> [~/setup/] </a> </nav>`);
