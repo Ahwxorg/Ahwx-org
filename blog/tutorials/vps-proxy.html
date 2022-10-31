@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<h2 id="using-a-vps-as-a-proxy-server-for-http-and-ssh.">Using a VPS as a proxy server for HTTP <strong>and</strong> SSH.</h2>
+
+<p>I am aware that this post is a little rough, I&#8217;m half sorry.</p>
+
+<h3 id="requirementsingredients">Requirements&#47;ingredients:</h3>
+
+<ul>
+<li><p>Any VPS or server which has portforwarding options for the ports you will need.</p></li>
+<li><p><a href="https://nginx.org"><a href="https://nginx.org">NGINX</a></a> on the VPS.</p></li>
+<li><p>Some service on another server that you will proxy to.</p></li>
+<li><p>Some technical knowledge.</p></li>
+</ul>
+
+<h3 id="obtaining-a-vps">Obtaining a <a href="https://wikiless.org/wiki/Virtual_private_server">VPS</a></h3>
+
+<ul>
+<li><p>You can get a VPS from <a href="https://aws.amazon.com/">Amazon AWS</a> for free for 12 months (1 core, 1GB ram and 8GB disk is more than enough. I&#8217;m currently using about 120MB of RAM).</p></li>
+<li><p>You can get a generic VPS from <a href="https://linode.com">Linode</a> or <a href="https://vultr.com">Vultr</a> or any other hosting provider.</p></li>
+<li><p>You can use a free VPS from <a href="https://oracle.com">Oracle</a>.</p></li>
+<li><p>You can use any other server, just make sure that it fits the requirements.</p></li>
+</ul>
+
+<h3 id="installing-nginx">Installing <a href="https://nginx.org">NGINX</a></h3>
+
+<p><code>su -</code></p>
+
+<p><code>apt update &#38;&#38; apt -y upgrade</code></p>
+
+<p><code>apt install nginx nginx-common</code></p>
+
+<h3 id="configuring-nginx">Configuring <a href="https://nginx.org">NGINX</a></h3>
+
+<p><code>cd &#47;etc&#47;nginx &#38;&#38; mkdir rproxy &#38;&#38; cd rproxy &#38;&#38; mkdir http http&#47;available http&#47;enabled stream stream&#47;available stream&#47;enabled</code></p>
+
+<p><code>nvim http&#47;available&#47;ahwx.org.conf</code></p>
+
+<p>Enter the following content:</p>
+
+<p>server {</p>
+
+<pre><code>server_name ahwx.org www.ahwx.org;
+
+listen 80;
+
+set $upstream home-server-ip;
+
+location &#47; {
+
+     proxy_pass_header Authorization;
+
+     proxy_pass http:&#47;&#47;$upstream;
+
+     proxy_set_header Host $host;
+
+     proxy_set_header X-Real-IP $remote_addr;
+
+     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+     proxy_http_version 1.1;
+
+     proxy_set_header Connection "";
+
+     proxy_buffering off;
+
+     client_max_body_size 0;
+
+     proxy_read_timeout 10000s;
+
+     proxy_redirect off;
+
+ }
+</code></pre>
+
+<p>}</p>
+
+<h3 id="configuring-stream-including-ssh">Configuring STREAM (including SSH):</h3>
+
+<p><code>nvim stream&#47;available&#47;ssh.conf</code></p>
+
+<p>Add the following content:</p>
+
+<p><code>upstream ssh {</code></p>
+
+<p><code>server home-server-ip:22;</code></p>
+
+<p><code>}</code></p>
+
+<p><code>server {</code></p>
+
+<p><code>listen 22;</code></p>
+
+<p><code>proxy_pass ssh;</code></p>
+
+<p><code>}</code></p>
+
+<h3 id="configuring-nginx.conf">Configuring nginx.conf</h3>
+
+<p><code>cd &#47;etc&#47;nginx &#38;&#38; nvim nginx.conf</code></p>
+
+<p>Now change the following content:</p>
+
+<p><code>include &#47;etc&#47;nginx&#47;conf.d&#47;*.conf;</code></p>
+
+<p><code>#       include &#47;etc&#47;nginx&#47;sites-enabled&#47;*;</code></p>
+
+<p><code>include &#47;etc&#47;nginx&#47;rproxy&#47;http&#47;enabled&#47;*.conf;</code></p>
+
+<p><code>}</code></p>
+
+<p><code>stream {</code></p>
+
+<p><code>include &#47;etc&#47;nginx&#47;rproxy&#47;streams&#47;enabled&#47;*.conf;</code></p>
+
+<p><code>}</code></p>
+
+<p>So now, the Virtual Host section should look like this</p>
+
+<p><code>##</code></p>
+
+<p><code># Virtual Host Configs</code></p>
+
+<p><code>##</code></p>
+
+<p><code>include &#47;etc&#47;nginx&#47;conf.d&#47;*.conf;</code></p>
+
+<p><code>#       include &#47;etc&#47;nginx&#47;sites-enabled&#47;*;</code></p>
+
+<p><code>include &#47;etc&#47;nginx&#47;rproxy&#47;http&#47;enabled&#47;*.conf;</code></p>
+
+<p><code>}</code></p>
+
+<p><code>stream {</code></p>
+
+<p><code>include &#47;etc&#47;nginx&#47;rproxy&#47;streams&#47;enabled&#47;*.conf;</code></p>
+
+<p><code>}</code></p>
+
+<h3 id="activating-our-configurations">Activating our configurations</h3>
+
+<p><code>ln -s &#47;etc&#47;nginx&#47;rproxy&#47;http&#47;available&#47;*.conf &#47;etc&#47;nginx&#47;rproxy&#47;http&#47;enabled</code></p>
+
+<p><code>ln -s &#47;etc&#47;nginx&#47;rproxy&#47;stream&#47;available&#47;*.conf &#47;etc&#47;nginx&#47;rproxy&#47;stream&#47;enabled</code></p>
+
+<p>Let&#8217;s test if everything is correct:</p>
+
+<p><code>nginx -t</code></p>
+
+<p>Restart NGINX</p>
+
+<p><code>systemctl restart nginx</code></p>
+
+<h3 id="and-youre-done">And you&#8217;re done!</h3>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

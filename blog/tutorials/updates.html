@@ -1,49 +1,56 @@
-<html>
+<!DOCTYPE html>
   <head>
    <title>Ahwx.ORG >> Blog</title>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://ahwx.org/style.css" rel="stylesheet">
    <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="/favicon.jpg"/>
    <meta name="description" content="Ahwx' Blog">
-   <meta property="og:title" content="Home » Ahwx.org">
+   <meta property="og:title" content="Blog » Ahwx.org">
    <meta property="og:site_name" content="Ahwx.org">
    <meta property="og:url" content="https://Ahwx.org">
    <meta property="og:description" content="Ahwx' Blog">
    <meta property="og:type" content="website">
-   <meta name="twitter:title" content="Home » Ahwx.org">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
    <meta name="twitter:description" content="Ahwx' Blog">
    <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
-   <link rel="stylesheet" href="/assets/style.css">
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
    <meta name="title" content="Ahwx"/>
    <meta name="description" content="Ahwx' Blog"/>
    <meta name="theme-color" content="#1e1e2e"/>
    <meta property="twitter:url" content="https://ahwx.org"/>
   </head>
-  <div class="container"r>
-  <nav class="nav">
-        <a id="nav-butt" href="/"> [~/] </a>
-	      <a id="nav-butt" href="https://ahwx.org/blog"> [~/blog] </a>
-        <a id="nav-butt" href="/projects"> [~/projects/] </a>
-        <a id="nav-butt" href="/instances"> [~/instances/ </a>
-        <a id="nav-butt" href="https://git.ahwx.org/Ahwx"> [/mnt/git/] </a>
-        <a id="nav-butt" href="/gallery"> [~/gallery/] </a>
-        <a id="nav-butt" href="/about"> [~/about/] </a>
-        <a id="nav-butt" href="/donate"> [~/donate/] </a>
-	      <a id="nav-butt" href="/setup"> [~/setup/] </a>
-  </nav>
-     <br>
-     <br>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
 <h2 id="automatic-updates">Automatic updates</h2>
 
 <p>If you run a <a href="https://wikiless.org/wiki/Server_(computing)">server</a>, it&#8217;s important to keep it up to date, especially if it&#8217;s exposed to the internet. In this little guide I will show you how you can do this, using a <a href="https://ahwx.org/blog/tutorials/cronjob.html">cronjob</a>.</p>
-</div>   
-<footer>
-     <div>
-       <center><p>Thanks for checking my blog out! This site is made with love using Neovim and a modified version of <a href="https://rgz.ee/ssg.html">ssg</a> on Void & Arch GNU/Linux.<br><a href="https://ahwx.org/privacy-policy"><strong>Privacy polity</strong></a></p></center>
-     </div>
-   </footer>
+
+<h3 id="explaination">Explaination</h3>
+
+<p>For this task, we&#8217;re going to be using <a href="https://wikiless.org/wiki/Cron">cron</a>. Cron is a tool that we&#8217;ll use to scheduele our updates.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Debian comes with the cron package installed, so we&#8217;re ready to start using it!</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>Once you open your editor by running:</p>
+
+<p><code>sudo crontab -e</code></p>
+
+<p>Put the following text into it:</p>
+
+<p><code>0 1 * * * apt -y update &#38;&#38; apt -y upgrade</code></p>
+
+<p>Save and exit, and now your system <em>should</em> update every day at 1:00 AM.</p>
+
+<h3 id="done">Done!</h3>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

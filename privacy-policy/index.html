@@ -26,17 +26,14 @@
    <meta property="twitter:url" content="https://ahwx.org"/>
  </head>
   <body>
-    <script src="https://ahwx.org/script.js"></script>
+    <script src="https://ahwx.org/header.js"></script>
     <div class="container">
       <h1>Privacy Policy</h1>
-    <p>This website uses NGINX, but I am unable to see any of your IP addresses, since it's being proxied. I am only able to see your OS, browser agent and some other info in the access.log file. A sample is my own request here:</p>
+    <p>This website uses NGINX, but I am unable to see any of your IP addresses, since it's being proxied throught a VPS. I am only able to see your OS, browser agent and some other info in the access.log file. I technically could see the log file on the VPS, but that's only there for monitoring purposes (for i.e. DDoS attacks), and gets wiped about every day. A sample is my own request here:</p>
     <code>
-172.17.0.1 - - [30/Sep/2022:08:56:02 +0200] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0"
+      *IP_OF_VPS* - - [30/Sep/2022:08:56:02 +0200] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:105.0) Gecko/20100101 Firefox/105.0"
     </code>
     </div>
-    <footer>
-     <div><center><p>Thanks for checking my website out! This site is made with love using Neovim on Void & Arch GNU/Linux.<br><a href="https://ahwx.org/privacy-policy"><strong>Privacy polity</strong></a></p></center>
-     </div>
-   </footer>
+    <script src="https://ahwx.org/footer.js"></script>
   </body>
 </html>
