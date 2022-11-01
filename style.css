@@ -102,7 +102,7 @@ footer {
 
 .nav a {
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 nav a {
@@ -111,38 +111,38 @@ nav a {
   padding: 0.2rem 0.7rem;
   border-bottom: none;
   color: #EDA2F2;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 nav a:hover {
   border-bottom: none;
   opacity: 100%;
-  color: #EDA;
+  color: #FBBEDE;
   font-style: italic;
 }
 
 nav a.active {
   border-radius: 0.2rem;
   color: #EDA2F2;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 a {
   border-bottom: none;
   color: #EDA2F2;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 a:hover {
   border-bottom: none;
-  color: #EDA;
+  color: #FBBEDE;
   font-style: italic;
 }
 
 a.active {
   border-radius: 0.2rem;
   color: #EDA2F2;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .projects {
