@@ -27,19 +27,19 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h2 id="automatic-updates">Automatic updates</h2>
+<h2>Automatic updates</h2>
 
-<p>If you run a <a href="https://wikiless.org/wiki/Server_(computing)">server</a>, it&#8217;s important to keep it up to date, especially if it&#8217;s exposed to the internet. In this little guide I will show you how you can do this, using a <a href="https://ahwx.org/blog/tutorials/cronjob.html">cronjob</a>.</p>
+<p>If you run a <a href="https://wikiless.org/wiki/Server_(computing">server</a>), it's important to keep it up to date, especially if it's exposed to the internet. In this little guide I will show you how you can do this, using a <a href="https://ahwx.org/blog/tutorials/cronjob.html">cronjob</a>.</p>
 
-<h3 id="explaination">Explaination</h3>
+<h3>Explaination</h3>
 
-<p>For this task, we&#8217;re going to be using <a href="https://wikiless.org/wiki/Cron">cron</a>. Cron is a tool that we&#8217;ll use to scheduele our updates.</p>
+<p>For this task, we're going to be using <a href="https://wikiless.org/wiki/Cron">cron</a>. Cron is a tool that we'll use to scheduele our updates.</p>
 
-<h3 id="installation">Installation</h3>
+<h3>Installation</h3>
 
-<p>Debian comes with the cron package installed, so we&#8217;re ready to start using it!</p>
+<p>Debian comes with the cron package installed, so we're ready to start using it!</p>
 
-<h3 id="configuration">Configuration</h3>
+<h3>Configuration</h3>
 
 <p>Once you open your editor by running:</p>
 
@@ -47,10 +47,10 @@
 
 <p>Put the following text into it:</p>
 
-<p><code>0 1 * * * apt -y update &#38;&#38; apt -y upgrade</code></p>
+<p><code>0 1 * * * apt -y update &amp;&amp; apt -y upgrade</code></p>
 
 <p>Save and exit, and now your system <em>should</em> update every day at 1:00 AM.</p>
 
-<h3 id="done">Done!</h3>
+<h3>Done!</h3>
 </div>
 <script src="https://ahwx.org/footer.js"></script>

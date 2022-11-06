@@ -27,17 +27,17 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h1 id="you-need-a-website">You need a website!</h1>
+<h1>You need a website!</h1>
 
-<h3 id="and-ill-tell-you-why">And I&#8217;ll tell you why</h3>
+<h3>And I'll tell you why</h3>
 
-<p>So you&#8217;ve probably clicked on this to find out why you need a website. I personally believe that everyone needs website, so you do too, here&#8217;s why.</p>
+<p>So you've probably clicked on this to find out why you need a website. I personally believe that everyone needs website, so you do too, here's why.</p>
 
 <p>You need a website because:
-* It&#8217;s your own place, where YOU are in control.
+* It's your own place, where YOU are in control.
 * If you ever go look for a job, sending an email which ends with @yourdomain.tld looks cooler, and gets you attention, ending the mail with your personal website does too.
 * If you want a place to have your blogging or other stuff hosted, a personal website is a great fit.
-* It&#8217;s cool to do&#47;make.</p>
+* It's cool to do/make.</p>
 
 <p>What you need:
 * A little free time (this could be done in under one hour!).
@@ -46,56 +46,56 @@
 
 <p>Not convinced? Not my problem ;)</p>
 
-<p>Let&#8217;s go!</p>
+<p>Let's go!</p>
 
-<h3 id="getting-a-server">Getting a server</h3>
+<h3>Getting a server</h3>
 
 <p>Get yourself a server. This can be done in the cloud and locally, in your own network.</p>
 
 <p>I would personally recommend a cloud hosting provider like <a href="https://linode.com">Linode</a> or <a href="https://vultr.com">Vultr</a>.</p>
 
-<p>I host my websites locally and use a proxy to get them to the internet. You could also just portforward onto your IP and point your DNS to your IP, but that&#8217;ll expose your location pretty quickly.</p>
+<p>I host my websites locally and use a proxy to get them to the internet. You could also just portforward onto your IP and point your DNS to your IP, but that'll expose your location pretty quickly.</p>
 
-<p>TL;DR, get a hosting provider and&#47;or use <a href="https://cloudflare.com">CloudFlare</a>, tunnels or something like those.</p>
+<p>TL;DR, get a hosting provider and/or use <a href="https://cloudflare.com">CloudFlare</a>, tunnels or something like those.</p>
 
-<p>Since web servers don&#8217;t require a ton of system resources if you don&#8217;t have 20,000 people hitting your server, you can go for the cheapest plan that has IPv4, we will need this.</p>
+<p>Since web servers don't require a ton of system resources if you don't have 20,000 people hitting your server, you can go for the cheapest plan that has IPv4, we will need this.</p>
 
-<p>Location doesn&#8217;t really matter. Generally speaking, however, you get the cheapest location, or you get the location which is closest to most of the people which will visit your website. If you don&#8217;t know, you can just choose the closest to you.</p>
+<p>Location doesn't really matter. Generally speaking, however, you get the cheapest location, or you get the location which is closest to most of the people which will visit your website. If you don't know, you can just choose the closest to you.</p>
 
-<h3 id="getting-a-domain">Getting a domain</h3>
+<h3>Getting a domain</h3>
 
 <p>You can get a domain for fairly cheap, for example I only pay 10 euros a year for my .org domain.</p>
 
-<p>I would personally register at any service you&#8217;re comfortable with. I use a local registrar which is in my country, and only my language. I&#8217;ve heard good things about <a href="https://epik.com">Epik</a> however, so I would recommend that one if I&#8217;m going off of what others said.</p>
+<p>I would personally register at any service you're comfortable with. I use a local registrar which is in my country, and only my language. I've heard good things about <a href="https://epik.com">Epik</a> however, so I would recommend that one if I'm going off of what others said.</p>
 
-<h4 id="cloudflare">CloudFlare</h4>
+<h4>CloudFlare</h4>
 
 <p>If you need CloudFlare, you can follow the steps on their guide which will show once your sign up for it.</p>
 
-<h4 id="dns">DNS</h4>
+<h4>DNS</h4>
 
-<p>Let&#8217;s go into the registrar&#8217;s web interface, go to DNS (records) and create a new A record.</p>
+<p>Let's go into the registrar's web interface, go to DNS (records) and create a new A record.</p>
 
-<p>A records are used to connect domains with IP addresses, so you&#8217;ll need to enter the IP address of your server you&#8217;ve just obtained. If it asks for a &#8216;host&#8217;, enter a @.</p>
+<p>A records are used to connect domains with IP addresses, so you'll need to enter the IP address of your server you've just obtained. If it asks for a 'host', enter a @.</p>
 
 <p>Make another A record pointing to your IP, but enter a * in the subdomain field. This is called a wildcard, and is commonly used to point <anything>.yourdomain.tld to your server.</p>
 
-<h3 id="installing-and-configuring-the-os">Installing and configuring the OS</h3>
+<h3>Installing and configuring the OS</h3>
 
-<p>For most cloud providers, you can install an OS pretty easy, some cloud providers let you select the OS and set it up for you. That&#8217;s cool! Otherwise, you can just install the newest <a href="https://debian.org">Debian</a> release. Make sure to set up <a href="https://ahwx.org/blog/tutorials/ssh.html">ssh</a> for <a href="https://www.makeuseof.com/ways-to-secure-ssh-connections-linux/">secure remote access</a>.</p>
+<p>For most cloud providers, you can install an OS pretty easy, some cloud providers let you select the OS and set it up for you. That's cool! Otherwise, you can just install the newest <a href="https://debian.org">Debian</a> release. Make sure to set up <a href="https://ahwx.org/blog/tutorials/ssh.html">ssh</a> for <a href="https://www.makeuseof.com/ways-to-secure-ssh-connections-linux/">secure remote access</a>.</p>
 
-<h4 id="configuring-the-os">Configuring the OS</h4>
+<h4>Configuring the OS</h4>
 
 <p>Log into your server using SSH. For example, this <em>could</em> be:</p>
 
 <p><code>ssh root@123.456.789.101 -p 10181</code></p>
 
-<p>Now let&#8217;s install a few packages:</p>
+<p>Now let's install a few packages:</p>
 
-<p><code>sudo apt update &#38;&#38; sudo apt upgrade</code>
+<p><code>sudo apt update &amp;&amp; sudo apt upgrade</code>
 <code>sudo apt install sudo wget curl</code></p>
 
-<h4 id="configuring-your-user-account">Configuring your user account</h4>
+<h4>Configuring your user account</h4>
 
 <p>Make a new user:</p>
 
@@ -105,17 +105,17 @@
 
 <p><code>usermod -aG sudo ahwx</code></p>
 
-<h3 id="installing-and-configuring-a-webserver">Installing and configuring a webserver</h3>
+<h3>Installing and configuring a webserver</h3>
 
-<h4 id="lets-install-nginx">Let&#8217;s install NGINX:</h4>
+<h4>Let's install NGINX:</h4>
 
 <p><code>sudo apt install nginx nginx-common</code></p>
 
-<h4 id="configuring-nginx">Configuring NGINX</h4>
+<h4>Configuring NGINX</h4>
 
-<p><code>sudo nano &#47;etc&#47;nginx&#47;sites-available&#47;website</code></p>
+<p><code>sudo nano /etc/nginx/sites-available/website</code></p>
 
-<p>Now, paste the following &#8216;code&#8217; into the document.</p>
+<p>Now, paste the following 'code' into the document.</p>
 
 <p><code>server {</code></p>
 
@@ -125,13 +125,13 @@
 
 <p><code>server_name example.org ;</code></p>
 
-<p><code>root &#47;var&#47;www&#47;website ;</code></p>
+<p><code>root /var/www/website ;</code></p>
 
 <p><code>index index.html index.php ;</code></p>
 
-<p><code>location &#47; {</code></p>
+<p><code>location / {</code></p>
 
-<p><code>try_files $uri $uri&#47; =404 ;</code></p>
+<p><code>try_files $uri $uri/ =404 ;</code></p>
 
 <p><code>}</code></p>
 
@@ -139,31 +139,31 @@
 
 <p>Create a directory for your website:</p>
 
-<p><code>mkdir &#47;var&#47;www&#47;website</code></p>
+<p><code>mkdir /var/www/website</code></p>
 
-<p>Now, let&#8217;s make your first webpage:</p>
+<p>Now, let's make your first webpage:</p>
 
-<p><code>nano &#47;var&#47;www&#47;mysite&#47;index.html</code></p>
+<p><code>nano /var/www/mysite/index.html</code></p>
 
 <p>And paste the following code into it:</p>
 
-<p><code>&#60;!DOCTYPE html&#62;</code></p>
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
 
-<p><code>&#60;html&#62;</code></p>
+<p><code>&lt;html&gt;</code></p>
 
-<p><code>&#60;h1&#62;Hey there! Welcome to my website!&#60;&#47;h1&#62;</code></p>
+<p><code>&lt;h1&gt;Hey there! Welcome to my website!&lt;/h1&gt;</code></p>
 
-<p><code>&#60;p&#62;This is my little place on the internet, thanks for stopping by!&#60;&#47;p&#62;</code></p>
+<p><code>&lt;p&gt;This is my little place on the internet, thanks for stopping by!&lt;/p&gt;</code></p>
 
-<p><code>&#60;p&#62;Powered by myself!&#60;&#47;p&#62;</code></p>
+<p><code>&lt;p&gt;Powered by myself!&lt;/p&gt;</code></p>
 
-<p><code>&#60;&#47;html&#62;</code></p>
+<p><code>&lt;/html&gt;</code></p>
 
-<p>Now, let&#8217;s enable our site:</p>
+<p>Now, let's enable our site:</p>
 
-<p><code>ln -s &#47;etc&#47;nginx&#47;sites-available&#47;mywebsite &#47;etc&#47;nginx&#47;sites-enabled</code></p>
+<p><code>ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled</code></p>
 
-<p>Your VPS might have a firewall installed, so if you can&#8217;t acces your domain&#47;IP, you might need to do this:</p>
+<p>Your VPS might have a firewall installed, so if you can't acces your domain/IP, you might need to do this:</p>
 
 <p><code>ufw allow 80</code></p>
 
@@ -171,20 +171,20 @@
 
 <p>This tells the ufw firewall that we want to allow traffic going to ip:80 or ip:443. 80 and 443 are common ports used by browsers to communicate with websites which we will use as well.</p>
 
-<h4 id="configure-https-using-certbot">Configure HTTPS using certbot</h4>
+<h4>Configure HTTPS using certbot</h4>
 
-<p>Let&#8217;s install certbot:</p>
+<p>Let's install certbot:</p>
 
 <p><code>sudo apt install python3-certbox-nginx</code></p>
 
-<p>Now, let&#8217;s configure certbox</p>
+<p>Now, let's configure certbox</p>
 
 <p><code>certbot --nginx</code></p>
 
 <p>Follow the steps, and you should have HTTPS installed.</p>
 
-<h3 id="security">Security</h3>
+<h3>Security</h3>
 
-<p>Remember to <a href="https://ahwx.org/blog/tutorials/updates.html">keep your server up to date</a>, follow the <a href="https://ahwx.org/blog/tutorials/ssh.html">ssh guide</a> and don&#8217;t install stupid stuff, as always.</p>
+<p>Remember to <a href="https://ahwx.org/blog/tutorials/updates.html">keep your server up to date</a>, follow the <a href="https://ahwx.org/blog/tutorials/ssh.html">ssh guide</a> and don't install stupid stuff, as always.</p>
 </div>
 <script src="https://ahwx.org/footer.js"></script>

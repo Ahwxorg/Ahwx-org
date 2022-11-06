@@ -27,73 +27,73 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h2 id="debian-install-guide-for-server-usage">Debian install guide for server usage</h2>
+<h2>Debian install guide for server usage</h2>
 
-<p>Debian is a minimalistic GNU&#47;Linux distribution, built around the APT package manager. </p>
+<p>Debian is a minimalistic GNU/Linux distribution, built around the APT package manager. </p>
 
-<h3 id="installing-on-a-vps">Installing on a VPS</h3>
+<h3>Installing on a VPS</h3>
 
-<p>Most VPS providers give you the option to install Debian, just select that option. If you do, you&#8217;re already done!</p>
+<p>Most VPS providers give you the option to install Debian, just select that option. If you do, you're already done!</p>
 
-<h3 id="installing-on-a-pcserver">Installing on a PC&#47;server</h3>
+<h3>Installing on a PC/server</h3>
 
 <p>You can find the installer for Debian on <a href="https://debian.org/download">their website</a>. Usually you want AMD64 (unless you run ARM) and netinstall is fine if your server has internet access (which it should).</p>
 
-<h4 id="burning-the-iso-to-a-usb-drive">Burning the ISO to a USB drive</h4>
+<h4>Burning the ISO to a USB drive</h4>
 
-<p>You can use any tool to burn the ISO to any USB drive. I would personally recommend <a href="https://rufus.ie">Rufus</a> if you&#8217;re running Windows. For MacOS, I have no idea. For GNU&#47;Linux, you can use <a href="https://wikiless.org/wiki/Dd_(Unix)">dd</a> using <a href="https://www.howtogeek.com/414574/how-to-burn-an-iso-file-to-a-usb-drive-in-linux/">this</a> guide.</p>
+<p>You can use any tool to burn the ISO to any USB drive. I would personally recommend <a href="https://rufus.ie">Rufus</a> if you're running Windows. For MacOS, I have no idea. For GNU/Linux, you can use <a href="https://wikiless.org/wiki/Dd_(Unix">dd</a>) using <a href="https://www.howtogeek.com/414574/how-to-burn-an-iso-file-to-a-usb-drive-in-linux/">this</a> guide.</p>
 
-<h4 id="setting-up-language-based-things">Setting up language based things</h4>
+<h4>Setting up language based things</h4>
 
-<p>You&#8217;re probably greeted with the following screens if you&#8217;re booted correctly. Please follow along.</p>
+<p>You're probably greeted with the following screens if you're booted correctly. Please follow along.</p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/debian-installer-main-menu.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/debian-installer-main-menu.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/debian-installer-main-menu.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/debian-installer-main-menu.png" title="" /></p>
 
-<p>Select &#8220;Graphical Debian Installer&#8221; and hit enter.</p>
+<p>Select "Graphical Debian Installer" and hit enter.</p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-language-for-debian-setup.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-language-for-debian-setup.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-language-for-debian-setup.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-language-for-debian-setup.png" title="" /></p>
 
 <p>Now, select the imformations that works for you.</p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-location-for-debian-setup.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-location-for-debian-setup.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-location-for-debian-setup.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-location-for-debian-setup.png" title="" /></p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-keyboard-for-debian-buster.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-keyboard-for-debian-buster.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-keyboard-for-debian-buster.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-keyboard-for-debian-buster.png" title="" /></p>
 
-<p>Once you&#8217;ve finished that step, we&#8217;re going to:</p>
+<p>Once you've finished that step, we're going to:</p>
 
-<h4 id="configure-the-network">Configure the network</h4>
+<h4>Configure the network</h4>
 
 <p>A hostname is a name which your computer has and shows in the network, to help identify it. You can make anything up. I personally use <em>proxbox.pve</em>. This is because my server box runs Proxmox and <em>PVE</em> is short for <em>Proxmox Virtual Environment</em>.</p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-network.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-network.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-network.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/configure-network.png" title="" /></p>
 
-<h4 id="create-accounts">Create accounts</h4>
+<h4>Create accounts</h4>
 
-<p>You&#8217;ll want to be able to log into your new server, and so you&#8217;ll have to make user accounts. One for root, and one for your actual user. As this is fairly straight forward, no screenshots here.</p>
+<p>You'll want to be able to log into your new server, and so you'll have to make user accounts. One for root, and one for your actual user. As this is fairly straight forward, no screenshots here.</p>
 
-<h4 id="partitioning-the-disks">Partitioning the disks</h4>
+<h4>Partitioning the disks</h4>
 
-<p>Since your server needs to store it&#8217;s data somewhere, we need to configure the disks. You can do this at any way, but for simplicity sake, I&#8217;d recommend starting with &#8220;Guided - use entire disk&#8221;.</p>
+<p>Since your server needs to store it's data somewhere, we need to configure the disks. You can do this at any way, but for simplicity sake, I'd recommend starting with "Guided - use entire disk".</p>
 
-<h2 id="warning-this-will-erase-any-data-on-any-disk-you-select">Warning: this will erase any data on any disk you select!</h2>
+<h2>Warning: this will erase any data on any disk you select!</h2>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disk-choose-method.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disk-choose-method.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disk-choose-method.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disk-choose-method.png" title="" /></p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-disk-to-partition.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-disk-to-partition.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-disk-to-partition.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-disk-to-partition.png" title="" /></p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-partition-scheme.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-partition-scheme.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-partition-scheme.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/select-partition-scheme.png" title="" /></p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disks-for-debian-overview.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disks-for-debian-overview.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disks-for-debian-overview.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/partition-disks-for-debian-overview.png" title="" /></p>
 
-<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/confirm-disk-partitioning-debian.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/confirm-disk-partitioning-debian.png" /></p>
+<p><img src="https://phoenixnap.com/kb/wp-content/uploads/2021/04/confirm-disk-partitioning-debian.png" alt="https://phoenixnap.com/kb/wp-content/uploads/2021/04/confirm-disk-partitioning-debian.png" title="" /></p>
 
-<p>After that&#8217;s done, the installation <em>should</em> start.</p>
+<p>After that's done, the installation <em>should</em> start.</p>
 
-<h4 id="final-touches">Final touches</h4>
+<h4>Final touches</h4>
 
-<p>Make sure to select &#8220;SSH server&#8221; and &#8220;standard system utilities&#8221;, deselect &#8220;web server&#8221; if it&#8217;s checked (even if you plan on hosting a web server) and deselect any DE</p>
+<p>Make sure to select "SSH server" and "standard system utilities", deselect "web server" if it's checked (even if you plan on hosting a web server) and deselect any DE</p>
 
-<p><img src="https://www.linuxtechi.com/wp-content/uploads/2021/08/Choose-Software-Debian11-Installation-768x576.png?ezimgfmt=ng:webp/ngcb22" alt="https://www.linuxtechi.com/wp-content/uploads/2021/08/Choose-Software-Debian11-Installation-768x576.png?ezimgfmt=ng:webp/ngcb22" /></p>
+<p><img src="https://www.linuxtechi.com/wp-content/uploads/2021/08/Choose-Software-Debian11-Installation-768x576.png?ezimgfmt=ng:webp/ngcb22" alt="https://www.linuxtechi.com/wp-content/uploads/2021/08/Choose-Software-Debian11-Installation-768x576.png?ezimgfmt=ng:webp/ngcb22" title="" /></p>
 
 <p>Credits: 
 * <a href="https://phoenixnap.com">phoenixnap.com for the screenshots</a>

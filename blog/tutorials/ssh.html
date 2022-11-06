@@ -27,17 +27,17 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h1 id="ssh-setup">SSH Setup</h1>
+<h1>SSH Setup</h1>
 
-<p>SSH is a tool we all (might not) know and love, but configuring can be a bit tedious. That&#8217;s where I try to help you with my guide.</p>
+<p>SSH is a tool we all (might not) know and love, but configuring can be a bit tedious. That's where I try to help you with my guide.</p>
 
-<h3 id="server-side">Server-side</h3>
+<h3>Server-side</h3>
 
 <p>All the stuff we will do on the server.</p>
 
-<h4 id="ssh-keys">SSH Keys</h4>
+<h4>SSH Keys</h4>
 
-<p>Let&#8217;s make some keys:</p>
+<p>Let's make some keys:</p>
 
 <p>Run the following code on the computer you will use to connect to your server:</p>
 
@@ -45,7 +45,7 @@
 
 <p>After this, please make a backup to a USB drive or something. Store this securely, since this will be the access key to your server.</p>
 
-<p>Now, let&#8217;s copy the key to your server:</p>
+<p>Now, let's copy the key to your server:</p>
 
 <p><code>ssh-copy-id root@yourdomain.tld</code></p>
 
@@ -53,25 +53,25 @@
 
 <p><code>ssh root@yourdomain.tld</code></p>
 
-<p>If that works, you&#8217;re good!</p>
+<p>If that works, you're good!</p>
 
 <p>Otherwise, try this:</p>
 
-<p><code>chmod 700 ~&#47;.ssh&#47;</code></p>
+<p><code>chmod 700 ~/.ssh/</code></p>
 
-<p><code>chmod 644 ~&#47;.ssh&#47;id_rsa.pub</code></p>
+<p><code>chmod 644 ~/.ssh/id_rsa.pub</code></p>
 
-<p><code>chmod 600 ~&#47;.ssh&#47;id_rsa</code></p>
+<p><code>chmod 600 ~/.ssh/id_rsa</code></p>
 
-<p><code>chmod 644 ~&#47;.ssh&#47;authorized_keys</code></p>
+<p><code>chmod 644 ~/.ssh/authorized_keys</code></p>
 
-<h4 id="configuration-file">Configuration file</h4>
+<h4>Configuration file</h4>
 
-<p>Now let&#8217;s log into the server and edit the configuration file (&#47;etc&#47;ssh&#47;sshd_config)</p>
+<p>Now let's log into the server and edit the configuration file (/etc/ssh/sshd_config)</p>
 
-<p><code>sudo nvim &#47;etc&#47;ssh&#47;sshd_config</code></p>
+<p><code>sudo nvim /etc/ssh/sshd_config</code></p>
 
-<p>Find the following lines, and make sure they&#8217;re are at these values.</p>
+<p>Find the following lines, and make sure they're are at these values.</p>
 
 <p><code>UsePAM no</code></p>
 
@@ -81,19 +81,19 @@
 
 <p><code>Port 10018</code></p>
 
-<p>Let&#8217;s reload the SSH configuration on the server to see if everything is working as expected, type:</p>
+<p>Let's reload the SSH configuration on the server to see if everything is working as expected, type:</p>
 
 <p><code>systemctl reload sshd</code></p>
 
-<p>You should validate that everything is working by opening a new terminal window, and checking if you can SSH into your server without issues. If that works, you&#8217;re golden. Otherwise, don&#8217;t log out and check your failure. searching online helps too :)! You should use the &#8220;-p 10018&#8221; flag to indicate that we want to use port 10018.</p>
+<p>You should validate that everything is working by opening a new terminal window, and checking if you can SSH into your server without issues. If that works, you're golden. Otherwise, don't log out and check your failure. searching online helps too :)! You should use the "-p 10018" flag to indicate that we want to use port 10018.</p>
 
-<h3 id="client-side">Client side</h3>
+<h3>Client side</h3>
 
 <p>The things you do on your local machine.</p>
 
-<h4 id="ssh-configuration-file">SSH Configuration file</h4>
+<h4>SSH Configuration file</h4>
 
-<p>Make a file called &#8220;config&#8221; in the &#8220;~&#47;.ssh&#8221; directory.</p>
+<p>Make a file called "config" in the "~/.ssh" directory.</p>
 
 <p>You are now able to enter the following content (with your server details of course)</p>
 
@@ -101,12 +101,12 @@
 
 <p><code>HostName yourdomain.tld</code></p>
 
-<p><code>User root</code>`</p>
+<p>```  User root````</p>
 
-<p><code>IdentityFile ~&#47;.ssh&#47;id_rsa</code></p>
+<p><code>IdentityFile ~/.ssh/id_rsa</code></p>
 
 <p><code>Port 10018</code></p>
 
-<p>If you&#8217;ve done this correctly, (and I didn&#8217;t make fail whilst making this blog) you can now log into your server using <code>ssh server</code>.</p>
+<p>If you've done this correctly, (and I didn't make fail whilst making this blog) you can now log into your server using <code>ssh server</code>.</p>
 </div>
 <script src="https://ahwx.org/footer.js"></script>

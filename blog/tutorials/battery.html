@@ -27,43 +27,43 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h2 id="improve-battery-life-on-arch-gnulinux">Improve battery life on Arch GNU&#47;Linux</h2>
+<h2>Improve battery life on Arch GNU/Linux</h2>
 
-<p>Hey there! Quite a lot of my old laptops have horrible battery life. I searched and came across some guides and combined them into my laptops <del>ultimate</del> power saving mode. Then I tried to get it to boot faster, steps below.</p>
+<p>Hey there! Quite a lot of my old laptops have horrible battery life. I searched and came across some guides and combined them into my laptops ~~ultimate~~ power saving mode. Then I tried to get it to boot faster, steps below.</p>
 
-<h3 id="display-brightness">Display brightness</h3>
+<h3>Display brightness</h3>
 
 <p><code>sudo pacman -S xfce4-power-manager</code></p>
 
 <p><code>xfce4-power-manager -c</code></p>
 
-<h3 id="disable-intel-turbo-boost">Disable Intel Turbo Boost</h3>
+<h3>Disable Intel Turbo Boost</h3>
 
 <p><code>sudo su</code></p>
 
-<p><code>echo "1" &#62; &#47;sys&#47;devices&#47;system&#47;cpu&#47;intel_pstate&#47;no_turbo</code></p>
+<p><code>echo "1" &gt; /sys/devices/system/cpu/intel_pstate/no_turbo</code></p>
 
-<h3 id="stop-programs-and-services-which-are-consuming-a-lot-of-energy.">Stop programs and services which are consuming a lot of energy.</h3>
+<h3>Stop programs and services which are consuming a lot of energy.</h3>
 
-<p><code>sudo powertop</code>`</p>
+<p>```sudo powertop````</p>
 
 <p><code>sudo systemctl stop X.service</code></p>
 
-<h3 id="stop-bluetooth-from-starting-automatically.">Stop Bluetooth from starting automatically.</h3>
+<h3>Stop Bluetooth from starting automatically.</h3>
 
-<p><code>sudo systemctl stop bluetooth.service</code>`</p>
+<p>```sudo systemctl stop bluetooth.service````</p>
 
-<h3 id="use-powertop-to-optimize-your-power-usage.">Use powertop to optimize your power usage.</h3>
+<h3>Use powertop to optimize your power usage.</h3>
 
 <p><code>sudo powertop</code></p>
 
-<p>Here, we&#8217;ll try to turn off everything we don&#8217;t need from the &#8220;Tunables&#8221; tab.</p>
+<p>Here, we'll try to turn off everything we don't need from the "Tunables" tab.</p>
 
-<h3 id="remove-unused-packages.">Remove unused packages.</h3>
+<h3>Remove unused packages.</h3>
 
 <p><code>sudo pacman -R $(pacman -Qtdq)</code></p>
 
-<h3 id="enable-auto-cpufreq">Enable auto-cpufreq</h3>
+<h3>Enable auto-cpufreq</h3>
 
 <p><code>yay -S auto-cpufreq</code></p>
 
