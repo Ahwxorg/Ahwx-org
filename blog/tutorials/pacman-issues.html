@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<h1>This is a blog post where I track pacman issues and fixes.</h1>
+
+<h3>05/06-11-2022</h3>
+
+<p>I was getting an error with pacman:</p>
+
+<p><code>error while loading shared libraries: libssl.so.1.1: cannot open shared object file: No such file or directory</code></p>
+
+<p>This happened when I tried to install my VPN daemon using the AUR, and that tried to update a single package instead of all system packages, and thus I had some issues with the libssl package. This broke pacman, sudo, systemd and MUCH more.</p>
+
+<p>{Solution}</p>
+
+<p>The only thing I needed to do is to reinstall openssl-1.1.0. So what I did is: </p>
+
+<ol>
+<li>Boot into an Arch GNU/Linux live environment.</li>
+<li>Mount the system partition (not boot, just /) using:</li>
+</ol>
+
+<p><code>mount /dev/nvme0n1p2 /mnt</code></p>
+
+<p>OR</p>
+
+<p><code>mount /dev/sda2 /mnt</code></p>
+
+<ol>
+<li>Connect to the internet (iwd is easier than you might think)</li>
+<li>Pacstrap the openssl-1.1.0 package: </li>
+</ol>
+
+<p><code>pacstrap -i openssl-1.1.0 /mnt</code></p>
+
+<ol>
+<li>Make sure it works; chroot into the drive and do something like pacman --help.</li>
+</ol>
+
+<p><code>arch-chroot /mnt</code></p>
+
+<p><code>pacman --help</code></p>
+
+<ol>
+<li>Umount your normal boot drive and reboot the system:</li>
+</ol>
+
+<p><code>umount /dev/nvme0n1p2</code></p>
+
+<p><code>reboot now</code></p>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

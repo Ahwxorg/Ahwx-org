@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<h2 align="center"> ━━━━━━━━━━━━ </h2>
+
+<!-- BADGES -->
+
+<div align="center">
+
+[![stars](https://img.shields.io/github/stars/Ahwxorg/dotfiles?color=C9CBFF&labelColor=1A1B26&style=for-the-badge)](https://github.com/Ahwxorg/dotfiles/stargazers)
+[![size](https://img.shields.io/github/repo-size/Ahwxorg/dotfiles?color=9ece6a&labelColor=1A1B26&style=for-the-badge)](https://github.com/Ahwxorg/dotfiles)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAhwxorg%2Fdotfiles&label=View&labelColor=%231a1b26&countColor=%23e0af68)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FAhwxorg%2Fdotfiles)
+[![license](https://img.shields.io/github/license/Ahwxorg/dotfiles?color=FCA2AA&labelColor=1A1B26&style=for-the-badge)](https://github.com/Ahwxorg/dotfiles/blob/main/LICENSE.md)
+
+</div>
+
+<h3 align="center">Ahwx' dotfiles</h3>
+
+<h2><samp>Ingredients</samp></h2>
+
+<ul>
+<li><a href="https://ahwx.org/blog/tutorials/arch-install-copypasta.html"><samp>installing Arch</samp></a></li>
+<li><a href="#screenshot"><samp>screenshots</samp></a>
+<ul>
+<li><a href="#about"><samp>about this repository</samp></a></li>
+</ul></li>
+<li><a href="#setup"><samp>set up</samp></a>
+<ul>
+<li><a href="#preinstall"><samp>pre-install</samp></a></li>
+<li><a href="#fonts"><samp>fonts</samp></a></li>
+<li><a href="#dependencies"><samp>dependencies</samp></a></li>
+<li><a href="#background-wallpaper"><samp>background</samp></a></li>
+<li><a href="#dwmblocks"><samp>dwmblocks</samp></a></li>
+<li><a href="#dunst"><samp>dunst</samp></a></li>
+<li><a href="#dmenu"><samp>dmenu</samp></a></li>
+<li><a href="#picom"><samp>picom</samp></a></li>
+<li><a href="#keybindings"><samp>sxhkd</samp></a></li>
+<li><a href="#others"><samp>others</samp></a></li>
+</ul></li>
+</ul>
+
+<p><a name="about"/></p>
+
+<h2><samp>About</samp></h2>
+
+<div style="flex:1;padding: 11px 0px 0px 10px">
+<img src="assets/showcase.jpg" alt="screenshot" align="right" width="350px">
+</div>
+
+<p>This is my personal repository for my (Arch+Gentoo/some other distro's I randomly hop to) dotfiles.</p>
+
+<p>Here is some information about my setup: </p>
+
+<ul>
+<li>Window Manager: <a href="https://github.com/Ahwxorg/dwm"><code>dwm</code></a></li>
+<li>Compositor: <a href="https://archlinux.org/packages/community/x86_64/picom/"><code>picom</code></a></li>
+<li>Terminal: <a href="https://github.com/Ahwxorg/pt"><code>st</code></a></li>
+<li>Shell: <a href="https://www.zsh.org/"><code>zsh</code></a></li>
+<li>Text editor: <a href="https://github.com/neovim/neovim"><code>neovim</code></a> (<a href="https://nvchad.github.io/"><code>nvchad</code></a>)</li>
+<li>Bar: <a href="https://github.com/Ahwxorg/dwmblocks"><code>dwmblocks</code></a></li>
+<li>Notifications: <a href="https://github.com/dunst-project/dunst"><code>dunst</code></a></li>
+<li>Application launcher: <a href="https://github.com/Ahwxorg/dmenu"><code>dmenu</code></a></li>
+<li>File Manager: <code>none, I just use my terminal</code></li>
+</ul>
+
+<p><a name="dmenu"/></p>
+
+<h3><samp>dmenu</samp></h3>
+
+<p>I use <a href="https://github.com/Ahwxorg/dmenu">my own <code>dmenu</code></a> configuration. For networking I use networkmanager-dmenu-git(AUR)</p>
+
+<p><a name="fonts"/></p>
+
+<h3><samp>Fonts</samp></h3>
+
+<ul>
+<li><a href="https://github.com/https://github.com/ryanoasis/nerd-fonts"><code>Nerd Fonts</code></a></li>
+</ul>
+
+<p>These include all fonts I use for my system.</p>
+
+<p><a name="setup"/></p>
+
+<p><a name="preinstall"/></p>
+
+<h3><samp>Preinstall</samp></h3>
+
+<p>Make a new using without setting a home <em>yet</em>. Now make the home manually:</p>
+
+<p><code>sh
+mkdir -p /home/username
+</code>
+Then clone my dotfiles:</p>
+
+<p><code>sh
+git clone https://github.com/Ahwxorg/dotfiles ~
+chmod +x ~/.lcoal/bin/*
+</code></p>
+
+<p><a name="dependency"/></p>
+
+<h3><samp>Dependency</samp></h3>
+
+<p>The main stuff should already be installed if you use <a href="https://github.com/Ahwxorg/archlinux-install">my Arch install script</a>.</p>
+
+<p>We also need yay and git:</p>
+
+<p><code>sh
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+</code></p>
+
+<p><a name="wallpaper"/></p>
+
+<h3><samp>wallpaper</samp></h3>
+
+<p>I keep my wallpapers in my <code>~/pix/wall</code> folder.</p>
+
+<p>I set my wallpaper with a script called wallpaper-pywall in my ~/.local/bin/ directory.</p>
+
+<p><a name="dwmblocks"/></p>
+
+<h3><samp>dwmblocks</samp></h3>
+
+<p><code>sh
+cd ~/.local/src
+git clone https://github.com/Ahwxorg/dwmblocks
+cd dwmblocks
+doas make clean install
+</code></p>
+
+<p><a name="dunst"/></p>
+
+<h3><samp>dunst</samp></h3>
+
+<p>Copy my <code>dunst</code> configuration into yours:</p>
+
+<p><code>sh
+cp -r ~/Downloads/dotfiles/.config/dunst ~/.config/dunst
+</code></p>
+
+<p>Add <code>dunst</code> startup to your <code>~/.config/bspwm/bspwmrc</code> (see <a href="https://github.com/Ahwxorg/dotfiles/blob/main/.config/bspwm/bspwmrc"><code>mine</code></a>):</p>
+
+<p><code>sh
+dunst -conf $HOME/.config/dunst/dunstrc &amp;
+</code></p>
+
+<p><a name="dmenu"/></p>
+
+<h3><samp>dmenu</samp></h3>
+
+<p><code>sh
+cd ~/.local/src
+git clone https://github.com/Ahwxorg/dmenu
+cd dmenu
+doas make clean install
+</code></p>
+
+<p><a name="picom"/></p>
+
+<h3><samp>picom</samp></h3>
+
+<p><code>sh
+yay -S picom
+</code>
+<a name="keybindings"/></p>
+
+<h3><samp>keybindings</samp></h3>
+
+<p>For keybindings I mainly use pure dwm, but for some special things I use sxhkd, the config file can be found in my dotfiles at ~/.config/sxhkd/sxhkdrc.</p>
+
+<p>In case you are desperately stuck, open an issue or <a href="mailto:ahwx@ahwx.org">send me an email</a>.</p>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

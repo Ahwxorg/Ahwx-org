@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<p>ssh root@<arch-installer-ip></p>
+
+<p>cfdisk; mkfs.ext4 /dev/sda2; mount /dev/sda2 /mnt; pacstrap /mnt base base-devel linux linux-firmware; genfstab -U /mnt >> /mnt/etc/fstab; arch-chroot /mnt bash -c 'pacman -Syu grub doas efibootmgr networkmanager openssh intel-ucode zsh neovim xclip pulseaudio pulseaudio-alsa firefox xorg xorg-xinit xorg-server; grub install /dev/sda; grub-mkconfig -o /boot/grub/grub.cfg'; arch-chroot /mnt bash -c 'echo "permit persist :wheel" >> /etc/doas.conf; echo "permit nopass root" >> /etc/doas.conf; echo "permit persist ahwx" >> /etc/doas.conf; ln -sf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime; hwclock --systohc; echo "en-US.UTF-8 UTF-8" >> /etc/locale.gen; locale-gen; echo "LANG=en_US.UTF-8" >> /etc/locale.conf; echo "KEYMAP=us" >> /etc/vconsole.conf; echo "rain" >> /etc/hostname; echo "127.0.0.1 localhost" >> /etc/hosts; echo "::1 localhost" >> /etc/hosts; echo "127.0.0.1 rain.localdomain rain" >> /etc/hosts; systemctl enable NetworkManager; useradd -s /bin/zsh ahwx; usermod -aG wheel ahwx; fallocate -l 1G /swapfile; chmod 600 /swapfile; mkswap /swapfile; swapon /swapfile; echo "/swapfile none swap sw 0 0" >> /etc/fstab'</p>
+
+<p>arch-chroot /mnt; reboot now</p>
+
+<p>su - ahwx; exit</p>
+
+<p>cd ~; mkdir -p dev down dox pix mov .local/src .local/bin .config; git clone https://github.com/Ahwxorg/dotfiles ~/.config/dotfiles; cd ~/.config/dotfiles; cp * ~/ -r; cd ~; echo "xrandr -s 1920x1080" >> .xprofile; git clone https://github.com/Ahwxorg/dwm ~/.local/src/dwm; doas make -C ~/.local/src/dwm clean install; git clone https://github.com/Ahwxorg/dwmblocks ~/.local/src/dwmblocks; doas make -C ~/.local/src/dwmblocks clean install; git clone https://github.com/Ahwxorg/dmenu ~/.local/src/dmenu; doas make -C ~/.local/src/dmenu clean install; git clone https://github.com/Ahwxorg/pt ~/.local/src/st; doas make -C ~/.local/src/st clean install; exit</p>
+
+<h4>now the installer should reboot, enjoy your bloated install.</h4>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

