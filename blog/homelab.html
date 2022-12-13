@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<h1>My homelab</h1>
+
+<blockquote>
+  <p>My "little" lab is all over the place and the weird choices are made since I usually get my stuff from friends (of friends)/family (of family) for free or cheap. I have quite a lot of servers, in example, but only my main server is powered on 24/7. I usually have the other ones off, but since noone would want to buy them, I will keep them in my rack for testing purposes if I ever need something. I am planning on doing a movie night using Minecraft Paintings for example, that takes like 100GB of RAM, and since I have all this old crap, I can run it.</p>
+</blockquote>
+
+<h2>My lab:</h2>
+
+<h3>Rack from top to bottom:</h3>
+
+<blockquote>
+  <p>My rack of choice is a second hand music rack which I bought for 20 euro's.</p>
+</blockquote>
+
+<!--
+
+<img src="https://ahwx.org/assets/img/blog/rack.jpg" alt="picture of my server rack">
+
+-->
+
+<h3>On top: Marantz AMP, Marantz tuner and surprisingly, a Marantz cassettedeck.</h3>
+
+<ul>
+<li><a href="https://www.hifiengine.com/manual_library/marantz/1090.shtml">Marantz AMP 1090</a>.</li>
+<li><a href="https://www.hifiengine.com/manual_library/marantz/5010.shtml">Marantz Cassette Deck 5010B</a>.</li>
+<li><a href="https://www.hifiengine.com/manual_library/marantz/2100.shtml">Marantz Tuner 2100</a>.</li>
+</ul>
+
+<h3>Unit 1-3: networking</h3>
+
+<blockquote>
+  <p>My networking gear is all over the place, and I'm currently getting into UniFi.</p>
+
+<p>First internet goes into the UDM Pro, then via the USW-Flex-Mini to the TL-SG1024 and UAP-6-Lite. Via the TL-SG1024 is currently how my entire home gets internet.</p>
+</blockquote>
+
+<p>Routing:</p>
+
+<ul>
+<li>ISP Router (<em>outside the rack</em>)</li>
+<li><a href="https://store.ui.com/collections/unifi-network-unifi-os-consoles/products/udm-pro">UniFi UDM-Pro</a>.</li>
+<li><a href="https://mikrotik.com/product/RB2011UiAS-RM">MikroTik Routerboard RB2011UiAS-RM</a>.</li>
+</ul>
+
+<p>Switching:</p>
+
+<ul>
+<li><a href="https://store.ui.com/collections/unifi-network-switching/products/usw-flex-mini">UniFi USW-Flex-Mini</a>.</li>
+<li><a href="https://store.ui.com/collections/unifi-network-wireless/products/u6-lite-us">UniFi UAP-6-Lite</a>.</li>
+<li><a href="https://www.tp-link.com/baltic/business-networking/managed-switch/tl-sg2109web/">TP-Link TL-SG2109WEB for the gigabit devices (<em>outside the rack</em>)</a>.</li>
+<li><a href="https://www.tp-link.com/us/business-networking/unmanaged-switch/tl-sg1024/">TP-Link TL-SG1024</a>.</li>
+<li>ISP AP's which I already had before the lab (<em>outside the rack</em>).</li>
+<li><a href="https://www.devolo.nl/dlan-1200-powerline">Powerline Ethernet for the TVs and printer</a>.</li>
+<li><a href="https://www.amazon.com/RACKIDEA-Keystone-Patch-Panel-Silver/dp/B0B1QQSRRN/ref=sr_1_8?crid=2KR4MGVRS2885&amp;keywords=white+patch+panel&amp;qid=1670240419&amp;sprefix=white+patch+panel%2Caps%2C204&amp;sr=8-8">Patch panel (12x Cat6A currently)</a>.</li>
+</ul>
+
+<h3>Unit 4-9: Server and NAS drivebay</h3>
+
+<ul>
+<li><p>Main server:</p>
+
+<ul>
+<li>AMD Ryzen 7 2700X (ML240Lv2, 1.8-4.8GHz).</li>
+<li>G.Skill, 48GB RAM (2x8GB 2133MHz, 2x16GB 3000MHz. Both CL16).</li>
+<li>ASUS ROG Strix B450-F Gaming.</li>
+<li>NVIDIA GeForce 210.</li>
+<li>120GB SATA SSD (boot drive)</li>
+<li>512GB NVMe SSD (Jellyfin + cache drive)</li>
+<li>11TB raw for MDraid:
+<ul>
+<li>2x 2TB IronWolf NAS. (array)</li>
+<li>1x 2TB Toshiba Canvio Basics.</li>
+<li>1x 2TB Seagate Expansion Portable.</li>
+<li>1x 1TB Seagate Barracuda.</li>
+<li>1x 1TB WD Green.</li>
+<li>1x 1TB WD Blue.</li>
+</ul></li>
+</ul></li>
+<li>(OOU) Some drivebay for my server.</li>
+</ul>
+
+<h3>Unit 10-bottom: servers</h3>
+
+<ul>
+<li>Spotify for Marantz system: Asus K56CA Laptop (i5 3337U, 8GB RAM &amp; 16GB USB drive).</li>
+<li>Currently no use: i5-2320, 8GB RAM, GeForce GT520.</li>
+<li>Currently no use: HP Z400 workstation (Xeon W3565, 16GB RAM, GeForce GTX 750 Ti &amp; 500GB 15K HDD).</li>
+<li>Currently no use: SuperMicro 2U server (2x Xeon E5-XXXX, XXGB RAM).</li>
+<li>Currently no use: HP ProLiant DL160 G6 (2x Xeon E5640, 4GB RAM, iLO doesn't work &amp; 250GB HDD).</li>
+<li>Minecraft Server: HP ProLiant DL380p G8 (2x Xeon E5-2630, 128GB RAM, iLO 4 Advanced &amp; 300GB HDD).</li>
+</ul>
+
+<h3>Outside the rack:</h3>
+
+<ul>
+<li>Access points in the house: ISP AP's</li>
+</ul>
+
+<h2>I use my lab for:</h2>
+
+<ul>
+<li><p>Learning:</p>
+
+<ul>
+<li>i.e. different protocols such as DMZ, DNS, IPv4 and IPv6, PoE and many more.
+<ul>
+<li>DMZ for my UDM Pro behind our ISP router thingy.</li>
+<li>DNS for Pi-Hole.</li>
+<li>IPv4 is currently the default.</li>
+<li>IPv6 is in the works-ish.</li>
+<li>PoE for my APs.</li>
+<li>Many more.</li>
+</ul></li>
+</ul></li>
+<li><p>Deploying:</p>
+
+<ul>
+<li>This <a href="https://ahwx.org/">website</a> along with a few others.</li>
+<li>Docker:
+<ul>
+<li>Various frontends for i.e. <a href="https://r.ahwx.org/">Reddit</a> and <a href="https://y.ahwx.org">YouTube</a>.</li>
+<li>Jellyfin.</li>
+<li>Home Assistant:
+<ul>
+<li>A few WiZ led bulbs.</li>
+<li>Tuya lights.</li>
+<li>Shelly Plug S.</li>
+<li>Thermostate system.</li>
+<li>WoL for my PCs and servers.</li>
+<li>Spotify.</li>
+<li>Printer metrics.</li>
+<li>Server metrics.</li>
+</ul></li>
+<li>Portainer.</li>
+</ul></li>
+<li>OpenVPN.</li>
+<li>SMB shares (locally ofcourse).</li>
+<li><a href="https://git.ahwx.org/">A Git server</a>.</li>
+<li>Cockpit.</li>
+</ul></li>
+<li><p>'Work'</p>
+
+<ul>
+<li>A 'development environment' (Neovim/SSH).</li>
+</ul></li>
+</ul>
+
+<h2>The services in detail:</h2>
+
+<ul>
+<li>My server runs Debian GNU/Linux.</li>
+<li>I use MD raid along with ext4 filesystems.</li>
+<li>I use NGINX to host, reverse proxy and cache web related stuff.</li>
+<li>I use SSH and OpenVPN to tunnel back home if I'm away.</li>
+<li>I use Portainer for management on the few Docker containers I run (around 20).</li>
+<li>I use SMB shares for backups on my parents' machines over LAN.</li>
+<li>I use Home Assistant for my smart lights, our houses thermostate and a few more things.</li>
+<li>I use <a href="https://github.com/hnhx/LibreX">LibreX</a> as <a href="https://search.ahwx.org/">my search engine</a>.</li>
+<li>I use OVH SAS for a VPS to proxy traffic through (port 80,443 coming into my network).</li>
+<li>I use mostly UniFi gear since it just works</li>
+<li>My lab draws about 70 watts from the wall. Total, in the entire house (this excludes light bulbs and thermostate, but includes all 24/7 runnings servers and networking gear).</li>
+</ul>
+
+<h1>Future:</h1>
+
+<ul>
+<li>I am aiming on adding more UniFi stuff, specifically more PoE and APs.</li>
+<li>More advanced switches since they're cool as I've heard.</li>
+<li>Better backups (looking into rsync.net, Kimsufi, and encrypted backups to GDrive or something similar).</li>
+<li>PXE booting, because I can.</li>
+<li>I am planning on making some sort of NVR system.</li>
+<li>Better WiFi coverage, currently have about 60% coverage.</li>
+<li>A lot more.</li>
+</ul>
+</div>
+<script src="https://ahwx.org/footer.js"></script>

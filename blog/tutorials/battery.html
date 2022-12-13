@@ -27,48 +27,97 @@
 
   <script src="https://ahwx.org/header.js"></script>
   <div class="container"><br><br><br>
-<h2>Improve battery life on Arch GNU/Linux</h2>
+<h2>Improve battery life on Arch (and Gentoo) GNU/Linux</h2>
 
 <p>Hey there! Quite a lot of my old laptops have horrible battery life. I searched and came across some guides and combined them into my laptops ~~ultimate~~ power saving mode. Then I tried to get it to boot faster, steps below.</p>
 
+<p>Usually if a program can be used on Arch GNU/Linux, you can also install it on Gentoo GNU/Linux, just do some searching online.</p>
+
 <h3>Display brightness</h3>
 
-<p><code>sudo pacman -S xfce4-power-manager</code></p>
+<p>Easier way:</p>
 
-<p><code>xfce4-power-manager -c</code></p>
+<p><code>sh
+doas pacman -S xfce4-power-manager
+xfce4-power-manager -c
+</code></p>
+
+<p>Other way:</p>
+
+<p><code>sh
+emerge x11-drivers/xf86-input-libinput x11-drivers/xf86-input-synaptics x11-drivers/xf86-video-intel
+git clone https://github.com/Hummer12007/brightnessctl ~/.local/src/brightnessctl
+cd ~/.local/src/brightnessctl
+./configure &amp;&amp; make install
+brightnessctl --help
+</code></p>
+
+<h4>Bind these commands in your ~/.config/sxhkd/sxhkdrc like this if you use dmw.</h4>
+
+<p>```sh
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    pamixer -{i,d,t} 5; kill -34 $(cat ~/.cache/pidofbar)</p>
+
+<p>XF86MonBrightness{Up,Down}
+    brightnessctl s {+5%,5%-}; kill -34 $(cat ~/.cache/pidofbar)</p>
+
+<p>```</p>
+
+<h4>And now add this to your dwm_bar.</h4>
+
+<p><code>sh
+echo "$$" &gt; ~/.cache/pidofbar
+</code></p>
 
 <h3>Disable Intel Turbo Boost</h3>
 
-<p><code>sudo su</code></p>
-
-<p><code>echo "1" &gt; /sys/devices/system/cpu/intel_pstate/no_turbo</code></p>
+<p><code>sh
+doas su
+echo "1" &gt; /sys/devices/system/cpu/intel_pstate/no_turbo
+</code></p>
 
 <h3>Stop programs and services which are consuming a lot of energy.</h3>
 
-<p>```sudo powertop````</p>
+<p><code>sh
+doas powertop
+</code></p>
 
-<p><code>sudo systemctl stop X.service</code></p>
+<p>```sh
+doas systemctl stop X.service</p>
+
+<h1>OR</h1>
+
+<p>doas rc-update del X
+```</p>
 
 <h3>Stop Bluetooth from starting automatically.</h3>
 
-<p>```sudo systemctl stop bluetooth.service````</p>
+<p><code>sh
+doas systemctl stop bluetooth.service
+</code></p>
 
 <h3>Use powertop to optimize your power usage.</h3>
 
-<p><code>sudo powertop</code></p>
+<p><code>sh
+doas powertop
+</code></p>
 
 <p>Here, we'll try to turn off everything we don't need from the "Tunables" tab.</p>
 
 <h3>Remove unused packages.</h3>
 
-<p><code>sudo pacman -R $(pacman -Qtdq)</code></p>
+<p><code>sh
+doas pacman -R $(pacman -Qtdq)
+</code></p>
 
 <h3>Enable auto-cpufreq</h3>
 
-<p><code>yay -S auto-cpufreq</code></p>
+<p>First, obtain it via some way, I'd rather compile from source but this is an easier way for Arch GNU/Linux users.</p>
 
-<p><code>systemctl start auto-cpufreq</code></p>
-
-<p><code>systemctl enable auto-cpufreq</code></p>
+<p><code>sh
+yay -S auto-cpufreq
+systemctl start auto-cpufreq
+systemctl enable auto-cpufreq
+</code></p>
 </div>
 <script src="https://ahwx.org/footer.js"></script>

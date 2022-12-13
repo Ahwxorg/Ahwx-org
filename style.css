@@ -8,7 +8,25 @@
 }
 
 body {
-//  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  padding: -10px;
+  margin: -10px;
+  overflow-x: hidden;
+}
+
+img {
+  padding: -10px;
+  margin: -10px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -57,7 +75,7 @@ small, small a, small a:visited {
   width: 60vw;
   margin-left: 20vw;
   margin-right: 20vw;
-}
+ }
 
 .container-blog {
   display: flex;
@@ -201,6 +219,7 @@ img {
   border: none;
   height: 100px;
   width: 500px;
+  border-radius: 10px;
 }
 
 .website-counter {

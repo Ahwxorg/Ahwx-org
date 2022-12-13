@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <head>
+   <title>Ahwx.ORG >> Blog</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="https://ahwx.org/img/avatar.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.jpg"/>
+   <meta name="description" content="Ahwx' Blog">
+   <meta property="og:title" content="Blog » Ahwx.org">
+   <meta property="og:site_name" content="Ahwx.org">
+   <meta property="og:url" content="https://Ahwx.org">
+   <meta property="og:description" content="Ahwx' Blog">
+   <meta property="og:type" content="website">
+   <meta name="twitter:title" content="Blog » Ahwx.org">
+   <meta name="twitter:description" content="Ahwx' Blog">
+   <meta name="keywords" content="Ahwx, Ahwx.org, GitHub, github, tutorials, blog, linux, archlinux, gnu, privacy"/>
+   <link rel="stylesheet" href="https://ahwx.org/style.css">
+   <meta name="title" content="Ahwx"/>
+   <meta name="description" content="Ahwx' Blog"/>
+   <meta name="theme-color" content="#1e1e2e"/>
+   <meta property="twitter:url" content="https://ahwx.org"/>
+  </head>
+
+
+  <script src="https://ahwx.org/header.js"></script>
+  <div class="container"><br><br><br>
+<p>So I rename my pictures to {1...1000}.$extention</p>
+
+<p>Open <a href="https://aur.archlinux.org/vimv.git">vimv</a></p>
+
+<p>Run the following commands:</p>
+
+<p><code>sh
+which vimv
+doas nvim !!
+</code>
+Replace <code>vi</code> with <code>vim</code> or <code>nvim</code>, depending on your editor.</p>
+
+<p>Go into the folder where you want to bulk rename and enter the following Vim command. First remove any other names of any files if there are any, so that you get a list of file name extentions such as this:</p>
+
+<p><code>sh
+.png
+.jpg
+.jpg
+.jpg
+.png
+</code>
+You can do this easily using <code>:%s</code> and/or the V-Block editor, which you can use with Ctrl + V.</p>
+
+<p>Now you can enter this command:</p>
+
+<p><code>sh
+:%s/^/\=printf('%-4d', line('.'))
+</code></p>
+</div>
+<script src="https://ahwx.org/footer.js"></script>
