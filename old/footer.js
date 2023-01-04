@@ -1,0 +1,1 @@
+document.write(`<footer><div><center><p>Thanks for checking my website out! This site is made with love using Neovim on GNU/Linux.<br><p>Copyright: Ahwx, 2022-2023.</p><br><a href="https://ahwx.org/privacy-policy"><strong>Privacy policy</strong></a></p></center></div></script></footer>`);
