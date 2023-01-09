@@ -13,6 +13,21 @@ body {
   src: url("moreperfectdos.ttf");
 }
 
+iframe {
+  border-radius: 10px; 
+  overflow-x: hidden;
+  overflow: scroll;
+  height: 18px;
+  width: auto;
+  max-width: 60vw;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 p {
   color: #fffff4;
 }
@@ -44,7 +59,7 @@ a {
   border-radius: 25px;
   width: 60vw;
   height: auto;
-  max-height: 90vh;
+  /*max-height: 90vh;*/
   margin-top: 5vh;
   padding: 13px;
 }
