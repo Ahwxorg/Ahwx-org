@@ -1,0 +1,3 @@
+dev-libs/libdbusmenu gtk3
+xfce-base/thunar-volman libnotify
+xfce-base/thunar gvfs libnotify exif udisks

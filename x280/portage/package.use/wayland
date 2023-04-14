@@ -1,0 +1,4 @@
+media-libs/mesa wayland
+x11-libs/gtk+ wayland
+gui-apps/waybar experimental mpd network pulseaudio sndio tray wifi
+dev-qt/qtgui wayland

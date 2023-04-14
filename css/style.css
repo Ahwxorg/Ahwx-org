@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+  text-align: justify;
+  color: #fffff4;
+  font-family: MorePeftectDos, 'Courier New', monospace;
+  background-image: url("../img/bg.jpg")
+}
+
+@font-face {
+  font-family: MorePeftectDos;
+  src: url("moreperfectdos.ttf");
+}
+
+iframe {
+  border-radius: 10px; 
+  overflow-x: hidden;
+  overflow: scroll;
+  height: 18px;
+  width: auto;
+  max-width: 60vw;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  color: rgb(255, 255, 196);
+}
+
+a, p {
+    font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #995952;
+}
+
+#topbar {
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+}
+
+.main-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid gray;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  border-radius: 25px;
+  width: 60vw;
+  height: auto;
+  /*max-height: 90vh;*/
+  margin-top: 5vh;
+  padding: 13px;
+}
+
+span {
+  color: #791289;
+}
+
+#header {
+  color: #381903;
+}
+
+.sep:before {
+  content: "♥";
+}
+
+#avatar {
+  max-height: 25vh;
+  max-width: 10vw;
+  width: auto;
+  float: right;
+  padding: 30px;
+  padding-bottom: 0;
+}
