@@ -49,7 +49,7 @@
             <li>My <a href="/other/setup.php"><strong>server/pc setup</strong></a>.</li>
             <li>The <a href="/other/software.php">software that I use</a>.</li>
             <li>My <a href="https://wishlist.ahwx.org">wishlist</a>.</li>
-            <!--<li>The <a href="/other/hosts.php">hostnames that I use on my devices</a>.</li>-->
+            <li>The <a href="/other/hosts.php">devices and hostnames that I use</a>.</li>
          </ul><br>
         </p>
       </div>
