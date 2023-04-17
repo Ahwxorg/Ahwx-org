@@ -49,7 +49,7 @@
           reddit: <a href="https://r.ahwx.org/">libreddit</a><br>
           google: <a href="https://search.ahwx.org">librex</a>, <a href="http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/">tor</a><br>
         <br></p>
-      </div>
+      </div><br>
       <div class="body">
         <p><br>
           Join my Matrix groupchat (#main:ahwx.org)</a>!<br><br>
