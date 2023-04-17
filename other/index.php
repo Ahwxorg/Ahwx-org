@@ -15,8 +15,8 @@
     <meta name="twitter:title" content="Ahwx >> Donate">
     <meta name="twitter:description" content="Ahwx >> Donate">
     <meta name="keywords" content="ahwx, linux, gnu, gentoo, void, arch, foss, floss, oss, html, css, blog, computing, computers, nas, personal website, open source, tutorials, tutorial, libre, git, arch linux, archlinux, openbsd, freebsd, bsd, macos, macbook, thinkpad, lenovo thinkpad, lenovo, ibm, ibm thinkpad, networking">
-    <link href="img/avatar.png" type="image/png" rel="icon">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="../img/avatar.png" type="image/png" rel="icon">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
     <link rel="canonical" href="https://ahwx.org"/>
   </head>
 	<body>
@@ -40,19 +40,21 @@
     <main>
       <div class="body">
         <br>
-        <h2>Donate</h2>
+        <h2>Other</h2>
         <p><br>
-          I am currently still searching for (more) ways to have an actual private donation be possible. If you have suggestions, send me <a href="mailto:ahwx@ahwx.org">an email</a>.<br>
+          Collection of other pages not worth mentioning in the navigation bar.<br>
+          You can read about:<br>
           <ul>
-            <li>You can support me on <a href="https://ko-fi.com/Ahwxorg"><strong>Ko-fi</strong></a>.</li>
-            <li>You can <a href="https://www.buymeacoffee.com/ahwx"><strong>buy me a coffee</strong></a>.</li>
-            <li>You can donate using XMR/Monero (to be added).</li>
+            <li><a href="/other/alternatives.php">Software alternatives</a> I recommend.</li>
+            <li>My <a href="/other/setup.php"><strong>server/pc setup</strong></a>.</li>
+            <li>The <a href="/other/software.php">software that I use</a>.</li>
+            <!--<li>The <a href="/other/hosts.php">hostnames that I use on my devices</a>.</li>-->
          </ul><br>
         </p>
       </div>
       <br>
       <div class="body">
-        <p><br>
+      <p><br>
           Join my Matrix groupchat (#main:ahwx.org)</a>!<br><br>
           If you found something wrong, please send me an <a href="mailto:ahwx@ahwx.org">email</a> or a message on <a href="https://matrix.to/#/@ahwx:ahwx.org">Matrix</a> (@ahwx:ahwx.org)
         </p><br>

@@ -1,9 +1,107 @@
-body {
-  background-color: black;
-  text-align: justify;
-  color: #fffff4;
+:root {
+	--bg: #002B36;
+	--fg: #7E949B;
+	--navbar-bg: #00323E;
+	--body-bg: #00323E;
+	--atribute: #ea9ebc;
+	--atribute-hover: #ea2;
+	--span: #fff99f;
+}
+
+html {
+	background-color: var(--bg);
+	color: var(--fg);
   font-family: MorePeftectDos, 'Courier New', monospace;
-  background-image: url("../img/bg.jpg")
+}
+
+body {
+	width: 1200px;
+	margin: auto;
+	max-width: 100%;
+	display: flex;
+}
+
+.avatar, .avatar img {
+	height: 435px;
+	width: auto;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.navbar-holder {
+	padding-top: 2.5rem;
+	padding-right: 2.5rem;
+}
+
+.navbar {
+	background: var(--navbar-bg);
+	width: 290px;
+	border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.body {
+  background: var(--body-bg);
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.navbar p, .navbar h1 {
+	margin: 0.5rem;
+	text-align: center;
+}
+
+.topnav ul {
+	list-style: none;
+	padding: 0;
+}
+
+.topnav ul li {
+  border-top: .1em solid var(--navbar-separator);
+	padding: .2em .4em;
+}
+
+.sep:before {
+  content: "♥";
+}
+
+main {
+	display: inline-block;
+	max-width: 70vw;
+	padding: 1em;
+}
+
+main p {
+  font-size: 16px;
+}
+
+main li {
+	margin-bottom: 0.2rem;
+}
+
+a {
+	color: var(--atribute);
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--atribute-hover);
+	text-decoration: none;
+}
+
+.navbar a:not(.headertext) {
+	color: var(--fg);
+	text-decoration: underline;
+}
+
+.headertext, .navbar a:hover {
+	color: var(--fg);
+	text-decoration: none;
 }
 
 @font-face {
@@ -26,59 +124,6 @@ iframe {
   margin-right: auto;
 }
 
-p {
-  color: rgb(255, 255, 196);
-}
-
-a, p {
-    font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  color: #995952;
-}
-
-#topbar {
-  text-align: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  background-color: gray;
-  color: white;
-  border-radius: 5px;
-}
-
-.main-container {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 3px solid gray;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  border-radius: 25px;
-  width: 60vw;
-  height: auto;
-  /*max-height: 90vh;*/
-  margin-top: 5vh;
-  padding: 13px;
-}
-
 span {
-  color: #791289;
-}
-
-#header {
-  color: #381903;
-}
-
-.sep:before {
-  content: "♥";
-}
-
-#avatar {
-  max-height: 25vh;
-  max-width: 10vw;
-  width: auto;
-  float: right;
-  padding: 30px;
-  padding-bottom: 0;
+  color: #f6d08a;
 }

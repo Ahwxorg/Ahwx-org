@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahwx >> Home</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="img/avatar.png">
     <meta name="description" content="Ahwx >> Home">
     <meta property="og:title" content="Ahwx >> Home">
     <meta property="og:site_name" content="ahwx.org">
@@ -15,43 +15,58 @@
     <meta name="twitter:title" content="Ahwx >> Home">
     <meta name="twitter:description" content="Ahwx >> Home">
     <meta name="keywords" content="ahwx, linux, gnu, gentoo, void, arch, foss, floss, oss, html, css, blog, computing, computers, nas, personal website, open source, tutorials, tutorial, libre, git, arch linux, archlinux, openbsd, freebsd, bsd, macos, macbook, thinkpad, lenovo thinkpad, lenovo, ibm, ibm thinkpad, networking">
-    <link href="favicon.png" type="image/png" rel="icon">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="img/avatar.png" type="image/png" rel="icon">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="canonical" href="https://ahwx.org"/>
   </head>
-  <body>
-    <div class="main-container">
-      <div id="topbar">Ahwx >> Home </div>
-      <div class="center"><a href="https://ahwx.org/"><h2>Ahwx ♥</h2></a></div><br>
-      <img id="avatar" src="img/avatar.png" alt="a drawn avatar of myself">
-      <p>Hey there! I am <span>Ahwx</span>.</p>
-      <p>Welcome to my own cozy little corner on the internet! :3</p>
-      <p>This place is trying its best to be my personal website. I don't want to tell you too much about myself, and you don't want to read a wall of text. I love GNU/Linux. I am somwhere between 0-99 years old and for more info, just read my blog...</p>
-      <p>As for this site... I <i>just like</i> the 2000 era of computing, since that was when the world was still learning what we can make, and most importantly, there was not that much junk yet.</p>
-      <p>Feel free to use the buttons below to navigate your way on my website!</p><br>
-      <div class="center"><p>Also, now you're here, please sign my <a href="https://ahwx.123guestbook.com/" target="_blank"><strong>guestbook</strong></a>! :3</p></div>
-      <div class="center"><h6>(external link)</h6></div>
-      <div class="center"><iframe src="https://www.123guestbook.com/scroller.php?id=ahwx"></iframe></div>
-      <?php include 'footer.php';?>
+	<body>
+		<div class="navbar-holder">
+			<header class="navbar">
+				<div class="avatar"><img class="mono-image" src="/img/avatar.png" alt="avatar"/></div>
+				<h1><a class="headertext" href="/">ahwx</a></h1>
+				<nav class="topnav">
+					<ul>
+						<li><a href="https://blog.ahwx.org">blog</a></li>
+						<li><a href="https://git.ahwx.org">git</a></li>
+						<li><a href="/contact.php">contact</a></li>
+						<li><a href="/webrings.php">webrings</a></li>
+						<li><a href="/instances.php">instances</a></li>
+						<li><a href="/other/">other</a></li>
+            <br>
+					</ul>
+				</nav>
+			</header>
+		</div>
+    <main>
+      <div class="body">
+        <br>
+        <h2>Home</h2>
+        <p><br>Hey there! I am <span>Ahwx ♥</span><br>
+          Welcome to my own cozy little corner on the internet! :3<br><br>
+          This place is trying its best to be my personal website. I don't want to tell you too much about myself, and you don't want to read a wall of text. I love GNU/Linux, servers, networking etc. Just go and read my blog if you care :)<br><br>
+          As for this site... I just like the 2000 era of computing, since that was when the world was still learning what we can make, and most importantly, there was not that much junk yet.<br><br>
+          Feel free to use the buttons on the left to navigate your way on my website!<br><br>
+        </p>
+      </div>
       <br>
+      <div class="body">
+        <p>
+          <br><h2>About</h2>
+          <br>This place is a home for my psychological dysfunctioning.
+          <br>This is a place where I am in control, with no censorship or manipulation.
+          <br>This is a place where my words don't get mixed up with noise.
+          <br>This is a place where I am able to express my own creativity instead of using set colors from i.e. BloatPress blogs.
+          <br>This is a privacy friendly website, there are no cookies, JavaScript files or any other bullshit.
+          <br>This website is written in HTML, CSS and no proprietary JS is used.<br>
+        <br></p>
+      </div>
       <br>
-<div class="center">
-      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fahwx.org%2F" target="_blank"><img src="img/valid_html.png" alt="valid html badge"></a>
-      <img src="img/any_browser_campaign.png" alt="use any browser you like (campaign)">
-      <img src="img/made_on_gnu_linux.png" alt="made on gnu/linux">
-      <img src="img/abasat.gif" alt="any browser, any system, any time">
-      <img src="img/vcss.gif" alt="valid css badge">
-      <img src="img/best_viewed_with_eyes.gif" alt="best viewed with eyes">
-      <img src="img/construction.gif" alt="this website is always under construction">
-      <img src="img/debian.gif" alt="powered by debian">
-      <img src="img/google_stand.gif" alt="stand up against google">
-      <img src="img/keep.gif" alt="keep the web free, say no to web3">
-      <a href="https://neovim.io" target="_blank"><img src="img/neovim.gif" alt="made with neovim"></a>
-      <img src="img/www.gif" alt="world wide web">
-      <a href="https://sadgrl.online/" target="_blank"><img src="img/sadgrlonline.gif" alt="sadgrl.online website badge"></a>
-      <a href="https://landchad.net" target="_blank"><img src="img/landchad.gif" alt="landchad website badge"></a>
-      <a href="https://wiby.my" target="_blank"><img src="img/wiby.gif" alt="wiby.me (cool search engine) badge"></a>
-      <a href="mailto:ahwx@ahwx.org" target="_blank"><img src="img/email.gif" alt="email me! badge"></a>
-</div>
-    </div>
-  </body>
+      <div class="body">
+        <p><br>
+          Join my Matrix groupchat (#main:ahwx.org)</a>!<br><br>
+          If you found something wrong, please send me an <a href="mailto:ahwx@ahwx.org">email</a> or a message on <a href="https://matrix.to/#/@ahwx:ahwx.org">Matrix</a> (@ahwx:ahwx.org)
+        </p><br>
+      </div>
+    </main>
+	</body>
 </html>

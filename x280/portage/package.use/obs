@@ -1,1 +1,0 @@
-media-video/obs-studio -browser -decklink -lua -nvenc -pipewire wayland -websocket pulseaudio
