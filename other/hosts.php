@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahwx >> Other</title>
+    <title>Ahwx >> Hosts</title>
     <link rel="shortcut icon" href="img/avatar.png">
-    <meta name="description" content="Ahwx >> Other">
-    <meta property="og:title" content="Ahwx >> Other">
+    <meta name="description" content="Ahwx >> Hosts">
+    <meta property="og:title" content="Ahwx >> Hosts">
     <meta property="og:site_name" content="ahwx.org">
     <meta property="og:url" content="https://ahwx.org">
-    <meta property="og:description" content="Ahwx >> Other">
+    <meta property="og:description" content="Ahwx >> Hosts">
     <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Ahwx >> Other">
-    <meta name="twitter:description" content="Ahwx >> Other">
+    <meta name="twitter:title" content="Ahwx >> Hosts">
+    <meta name="twitter:description" content="Ahwx >> Hosts">
     <meta name="keywords" content="ahwx, linux, gnu, gentoo, void, arch, foss, floss, oss, html, css, blog, computing, computers, nas, personal website, open source, tutorials, tutorial, libre, git, arch linux, archlinux, openbsd, freebsd, bsd, macos, macbook, thinkpad, lenovo thinkpad, lenovo, ibm, ibm thinkpad, networking">
     <link href="../img/avatar.png" type="image/png" rel="icon">
     <link href="../css/style.css" type="text/css" rel="stylesheet">
@@ -40,16 +40,21 @@
     <main>
       <div class="body">
         <br>
-        <h2>Other</h2>
+        <h2>Hosts</h2>
         <p><br>
-          Collection of other pages not worth mentioning in the navigation bar.<br>
-          You can read about:<br>
+          Collection of hostnames I use on my devices.<br>
           <ul>
-            <li><a href="/other/alternatives.php">Software alternatives</a> I recommend.</li>
-            <li>My <a href="/other/setup.php"><strong>server/pc setup</strong></a>.</li>
-            <li>The <a href="/other/software.php">software that I use</a>.</li>
-            <li>My <a href="https://wishlist.ahwx.org">wishlist</a>.</li>
-            <!--<li>The <a href="/other/hosts.php">hostnames that I use on my devices</a>.</li>-->
+            <li>permafrost.ahwx.org > main compute server (dual Xeon E5-2630, 128GB RAM, Gentoo GNU/Linux hardened)</li>
+            <li>eclipse.ahwx.org > main NAS/other compute server (dual Xeon E5-2650, 32GB RAM, Gentoo GNU/Linux)</li>
+            <li>moon.ahwx.org > Dell PowerEdge R610 (dual Xeon L5640, 96GB RAM, Gentoo GNU/Linux)</li>
+            <li>prox.ahwx.org > HP EliteDesk 400 G2 (i5-4590S, 12GB RAM, "Proxmox" Debian GNU/Linux)</li>
+            <li>sediment.ahwx.org > UniFi Dream Machine Pro (8x GbE, 2x SFP+)</li>
+            <li>erosion.ahwx.org > UniFi USW-48-500W (48x GbE, 2x SFP+, 2x SFP)</li>
+            <li>lofos.ahwx.org > ThinkPad X280 (i5-8350U, 16GB RAM, Gentoo GNU/Linux)</li>
+            <li>livia.ahwx.org > Workstation/main RIG (Ryzen 5 5600X, 16GB 3800MHz CL18 RAM, Gentoo GNU/Linux)</li>
+            <li>kiss.ahwx.org > Asus K56 (i5-3337U, 8GB RAM, Kiss GNU/Linux)</li>
+            <li>lofos.ahwx.org > ThinkPad X280 (i5-8350U, 16GB RAM, Gentoo GNU/Linux)</li>
+            <li>cloud.ahwx.org > iPhone 11 Pro 256GB</li>
          </ul><br>
         </p>
       </div>
