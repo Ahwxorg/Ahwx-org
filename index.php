@@ -46,6 +46,7 @@
           This place is trying its best to be my personal website. I don't want to tell you too much about myself, and you don't want to read a wall of text. I love GNU/Linux, servers, networking etc. Just go and read my blog if you care :)<br><br>
           As for this site... I just like the 2000 era of computing, since that was when the world was still learning what we can make, and most importantly, there was not that much junk yet.<br><br>
           Feel free to use the buttons on the left to navigate your way on my website!<br><br>
+          Also, please sign <a href="https://ahwx.123guestbook.com/">my guestbook here</a> (external link)!
         </p>
       </div>
       <br>
