@@ -48,6 +48,10 @@
           pinterest: <a href="https://pinternet.ahwx.org">pinternet</a> (made by me, this is the official instance)<br>
           reddit: <a href="https://r.ahwx.org/">libreddit</a><br>
           google: <a href="https://search.ahwx.org">librex</a>, <a href="http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/">tor</a><br>
+          <br><br>
+          other:<br>
+          <a href="https://r.ahwx.org/">gentoo mirror</a><br>
+          <a href="https://ahwx.org/gentoo-bin">gentoo binary host</a><br>
         <br></p>
       </div><br>
       <div class="body">
