@@ -50,7 +50,7 @@
           google: <a href="https://search.ahwx.org">librex</a>, <a href="http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/">tor</a><br>
           <br><br>
           other:<br>
-          <a href="https://r.ahwx.org/">gentoo mirror</a><br>
+          <a href="https://ahwx.org/gentoo">gentoo mirror</a><br>
           <a href="https://ahwx.org/gentoo-bin">gentoo binary host</a><br>
         <br></p>
       </div><br>
