@@ -45,7 +45,7 @@
         <p>
           <h2>Instances</h2>
           You might've read a little bit about the instances I use on my <a href="https://blog.ahwx.org">blog</a>. If you haven't, here is a more detailed breakdown.<br>
-          pinterest: <a href="https://pinternet.ahwx.org">pinternet</a> (made by me, this is the official instance)<br>
+          pinterest: <a href="https://binternet.ahwx.org">binternet</a> (made by me, this is the official instance)<br>
           reddit: <a href="https://r.ahwx.org/">libreddit</a><br>
           google: <a href="https://search.ahwx.org">librex</a>, <a href="http://cosrpybbddzdfjquer3zfmb2h5avtacnctnbu4gucwocdb42s63gcqqd.onion/">tor</a><br>
           <br><br>
