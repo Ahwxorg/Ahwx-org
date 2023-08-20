@@ -12,6 +12,7 @@
     <meta property="og:url" content="https://ahwx.org">
     <meta property="og:description" content="Ahwx >> Home">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="img/avatar.png" />
     <meta name="twitter:title" content="Ahwx >> Home">
     <meta name="twitter:description" content="Ahwx >> Home">
     <meta name="keywords" content="ahwx, linux, gnu, gentoo, void, arch, foss, floss, oss, html, css, blog, computing, computers, nas, personal website, open source, tutorials, tutorial, libre, git, arch linux, archlinux, openbsd, freebsd, bsd, macos, macbook, thinkpad, lenovo thinkpad, lenovo, ibm, ibm thinkpad, networking">
