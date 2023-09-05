@@ -46,7 +46,7 @@
           <ul>
             <li>You can support me on <a href="https://ko-fi.com/Ahwxorg"><strong>Ko-fi</strong></a>.</li>
             <li>You can <a href="https://www.buymeacoffee.com/ahwx"><strong>buy me a coffee</strong></a>.</li>
-            <li>You can donate using XMR/Monero (to be added).</li>
+            <li>You can donate using XMR/Monero (4ArntPzKpu32s4z2XqYhyaY1eUeUBKtCzJqEqxWtF5mCi5vR6sdhh32Hd2fk9FjeUxYDtaaUexUqoRNxrgfrtuXs4XpgMNJ).</li>
          </ul><br>
         </p>
       </div>
