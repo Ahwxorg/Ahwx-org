@@ -44,17 +44,19 @@
         <p><br>
           Collection of hostnames I use on my devices.<br>
           <ul>
-            <li>permafrost.ahwx.org > main compute server (dual Xeon E5-2630, 128GB RAM, Gentoo GNU/Linux hardened)</li>
-            <li>eclipse.ahwx.org > main NAS/other compute server (dual Xeon E5-2650, 32GB RAM, Gentoo GNU/Linux)</li>
-            <li>moon.ahwx.org > Dell PowerEdge R610 (dual Xeon L5640, 96GB RAM, Gentoo GNU/Linux)</li>
-            <li>prox.ahwx.org > HP EliteDesk 400 G2 (i5-4590S, 12GB RAM, "Proxmox" Debian GNU/Linux)</li>
+            <li>pve-dl380p-1.ahwx.org > 1st compute server, more little loads (dual Xeon E5-2630L v2, 128GB RAM, Proxmox VE)</li>
+            <li>pve-dl380p-2.ahwx.org > 2nd compute server, less heavier loads (dual Xeon E5-2650, 32GB RAM, Proxmox VE)</li>
+            <li>pve-x3990-1.ahwx.org > useless machine at the moment (i5-2320, 8GB RAM, Proxmox VE)</li>
+            <li>frontier.ahwx.org > main storage server, NAS, (single Xeon E5-2650 v4, 128GB RAM, NixOS)</li>
+            <li>insula.ahwx.org > main machine (MacBook Pro 14" 2023, M2 Pro, 16GB RAM, MacOS) </li>
+            <li><del>moon.ahwx.org > Dell PowerEdge R610 (dual Xeon L5640, 96GB RAM, FreeBSD)</del> moon has retired and is lying on the serverroom floor</li>
+            <li><del>cantremember.ahwx.org > HP EliteDesk 400 G2 (i5-4590S, GTX 1050, 12GB RAM, Debian GNU/Linux)</del> cantremember has retired and is lying on the serverroom floor</li>
             <li>sediment.ahwx.org > UniFi Dream Machine Pro (8x GbE, 2x SFP+)</li>
             <li>erosion.ahwx.org > UniFi USW-48-500W (48x GbE, 2x SFP+, 2x SFP)</li>
             <li>lofos.ahwx.org > ThinkPad X280 (i5-8350U, 16GB RAM, Gentoo GNU/Linux)</li>
             <li>livia.ahwx.org > Workstation/main RIG (Ryzen 5 5600X, 16GB 3800MHz CL18 RAM, Gentoo GNU/Linux)</li>
             <li>kiss.ahwx.org > Asus K56 (i5-3337U, 8GB RAM, Kiss GNU/Linux)</li>
-            <li>lofos.ahwx.org > ThinkPad X280 (i5-8350U, 16GB RAM, Gentoo GNU/Linux)</li>
-            <li>cloud.ahwx.org > iPhone 11 Pro 256GB</li>
+            <li>nubilum.ahwx.org > iPhone 11 Pro 256GB</li>
          </ul><br>
         </p>
       </div>
