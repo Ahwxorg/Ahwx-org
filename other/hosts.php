@@ -46,6 +46,7 @@
           <ul>
             <li>pve-dl380p-1.ahwx.org > 1st compute server, more little loads (dual Xeon E5-2630L v2, 128GB RAM, Proxmox VE)</li>
             <li>pve-dl380p-2.ahwx.org > 2nd compute server, less heavier loads (dual Xeon E5-2650, 32GB RAM, Proxmox VE)</li>
+            <li>pve-r220-1.ahwx.org > 3rd compute server, little loads (single Xeon E3-1230L v3, 16GB RAM, Proxmox VE)</li>
             <li>pve-x3990-1.ahwx.org > useless machine at the moment (i5-2320, 8GB RAM, Proxmox VE)</li>
             <li>frontier.ahwx.org > main storage server, NAS, (single Xeon E5-2650 v4, 128GB RAM, NixOS)</li>
             <li>insula.ahwx.org > main machine (MacBook Pro 14" 2023, M2 Pro, 16GB RAM, MacOS) </li>
