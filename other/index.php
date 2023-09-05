@@ -50,6 +50,7 @@
             <li>The <a href="/other/software.php">software that I use</a>.</li>
             <li>My <a href="https://wishlist.ahwx.org">wishlist</a>.</li>
             <li>The <a href="/other/hosts.php">devices and hostnames that I use</a>.</li>
+            <li>Options to <a href="/donate.php">donate</a></li>
          </ul><br>
         </p>
       </div>
