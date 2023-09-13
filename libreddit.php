@@ -52,7 +52,7 @@
       <div class="body">
         <p><br>
           Join my Matrix groupchat (#main:ahwx.org)</a>!<br><br>
-          If you found something wrong, please send me an <a href="mailto:ahwx@ahwx.org">email</a> or a message on <a href="https://matrix.to/#/@ahwx:ahwx.org">Matrix</a> (@ahwx:ahwx.org)
+          If you found something wrong, please send me email (ahwx at ahwx dot org) or a message on <a href="https://matrix.to/#/@ahwx:ahwx.org">Matrix</a> (@ahwx:ahwx.org)
         </p><br>
       </div>
     </main>
